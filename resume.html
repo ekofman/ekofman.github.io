@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<head>
+	<meta name="description" content="eric kofman">
+	<meta name="keywords" content="eric kofman, stanford">
+	<link rel="stylesheet" href = "ekofmanstyle.css">
+	<script type='text/javascript'>
+		function expandToWindow(element) {
+			 var margin = 10; 
+			 if (element.style.height < window.innerHeight) { 
+				element.style.height = window.innerHeight + margin;
+			 }
+		}
+	</script>
+	<title>
+		Eric Kofman
+	</title>
+</head>
+
+<body onload='expandToWindow(document.getElementById("wrapper"));'>
+	<div id = "header">
+	
+		<div id = "pageTitle">
+			<a href = "index.html"> Eric Kofman </a>
+		</div>
+		
+		<ul>
+			<li> <a href = "resume.html"> Resum&eacute </a> </li>
+			<li> <a href = "projects.html"> Projects </a> </li>
+			<li> <a href = "coursework.html"> Coursework </a> </li>
+			<li> <a href = "art.html"> Art </a> </li>
+			<li> <a href = ""> Origami </a> </li>
+			<li> <a target="_blank" href = "http://www.inkorrigible.blogspot.com"> Webcomic </a> </li> 
+		</ul>
+		
+	</div>
+	<div id = "wrapper">
+			<a href = "http://www.linkedin.com/pub/eric-kofman/29/986/59a"> 
+				<div id = "subtitle">
+					<u>Linked-in Profile</u>
+				</div>
+			</a>
+			<div id = "resume">
+				<img src = "images/resume.jpg"> 
+			</div>
+	</div>
+</body>
+</html>

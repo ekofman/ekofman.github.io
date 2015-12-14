@@ -1,0 +1,278 @@
+body{
+	background-color: white;
+}
+
+*{
+	font-family: Sans-Serif;
+}
+
+/* Footer styles */
+#footer{
+	position:absolute;
+    left:50%;
+	margin-left: -25em;
+	width: 100em;
+	font-weight: bold;
+	font-size: 15px;
+	font-style: bold;
+	padding: 20px;
+	padding-top: 50px;
+}
+
+#footer a{
+	text-decoration: none;
+	color: black;
+}
+
+/* Header styles */
+#header{
+	padding-top: 30px;
+	margin-bottom: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+	background-color: white;
+	background-repeat: repeat-x;
+}
+
+#pageTitle{
+	padding-left: 50px;
+	font-size: 50pt;
+	color: black;
+	font-weight: bold;
+}
+
+#pageTitle a{
+	text-decoration: none;
+	color: black;
+	background-color: white;
+}
+
+#header ul{
+	padding-top: 30px;
+	position: absolute;
+	list-style-type: none;
+	padding-left: none;
+	margin-left: none;
+}
+
+#header li{
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 1px;
+}
+
+#header ul a{
+	border-radius: 15px;
+	border-color: #dddddd;
+	border-style: solid;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	color: black;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: 25pt;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#header ul a:hover{
+	background-color: #dddddd;
+	color: black;
+}
+
+#selfPortrait{
+	float: right;
+	padding-right: 50px;
+}
+
+/* Main styles */
+#main{
+	font-size: 20px;
+	font-family: Sans-Serif;
+	background-color: #eeeeee;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 100px;
+	padding-top: 50px;
+}
+
+#indexImage{
+	padding-top: 30px;
+	text-align: center;
+	padding-bottom: 44px;
+}
+
+#indexImage img{
+	border-right-style: solid;
+	border-right-color: #4c4c9c;
+	border-bottom-style: solid;
+	border-bottom-style: #4c4c9c;
+}
+
+#gallery div.img{
+	padding: 20px;
+	border:5px solid;
+	border-left-color: #7e7ecf;
+	border-top-color: #bfbfff;
+	border-bottom-color: black;
+	border-right-color: #3b3b8b;
+	background-color: #4c4c9c;
+	height:auto;
+	width:auto;
+	float:left;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gallery div.img.img{
+  display:inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+.desc{
+  font-size: 15px;
+  position: relative;
+  color: black;
+ }
+ 
+ .artdesc{
+	text-align: center;
+	font-size: 10px;
+	color: black;
+	font-weight: bold;
+}
+
+.displayImage{
+	display: block;
+	margin: auto;
+	box-shadow: 5px 5px 10px black;
+}
+
+#displayWindow{
+	height: 350px;
+	width: 700px;
+	margin-left: 20px;
+	margin-right: 50px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #bbbbbb;
+	border-radius: 80px;
+	border-style: solid;
+	border: none;
+	float: right;
+}
+
+.artThumbnail{
+	border-radius: 25px;
+	box-shadow: 2px 2px 5px grey;
+}
+
+
+.artExplanation{
+	padding: 5px;
+	height: 350px;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+}
+
+#subtitle{
+	font-size: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: Arial;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	clear: both;
+}
+
+#wrapper a{
+	text-decoration: none;
+}
+
+.projectThumbnail{
+	border-radius: 15px;
+	box-shadow: 2px 2px 5px #555555;
+	margin: 10px;
+}
+
+.origamiThumbnail{
+	border-radius: 15px;
+	box-shadow: 2px 2px 5px #555555;
+	margin: 10px;
+}
+/* =Hoverbox Code, functionality by Nathan Smith, with stylistic modifications
+----------------------------------------------------------------------*/
+
+.hoverbox
+{
+	padding-right: 350px;
+	cursor: default;
+	list-style: none;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.hoverbox a
+{
+	cursor: default;
+}
+
+.hoverbox a .preview
+{
+	display: none;
+}
+
+.hoverbox a:hover .preview
+{
+	display: block;
+	position: fixed;
+	top: 20%;
+	right: 10%;
+	z-index: 1;
+}
+
+.hoverbox img
+{
+	background-color: #dfdfff;
+	border-color: #aaa #ccc #ddd #bbb;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	padding: 2px;
+	vertical-align: top;
+	width: 100px;
+	height: 90px;
+}
+
+.hoverbox li
+{
+	background: #dfdfff;
+	border-color: #ddd #bbb #aaa #ccc;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	display: inline;
+	float: left;
+	margin: 3px;
+	padding: 5px;
+	position: relative;
+}
+
+.hoverbox .preview
+{
+	background-color: #dfdfff;
+	border-color: #000;
+	width: auto;
+	height: auto;
+}

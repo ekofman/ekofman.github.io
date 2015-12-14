@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>
+Mutation Calculator
+</title>
+</head>
+
+<style type="text/css">
+body{
+	font-family: Helvetica;
+	background: #AAAACC;
+}
+
+h1{
+	color: #FFAA22;
+}
+
+textarea{
+	width: 500px;
+	height: 100px;	
+	font-size: 20px;
+}
+
+input{
+	margin: 10px;
+	width: 140px;
+	height: 80px;
+	font-size: 20px;
+	font-family: Helvetica;
+}
+
+#wrapper{
+	width: 600px;
+	margin: auto;
+	background: #DDDDFF;
+	padding: 10px;
+}
+
+#answer{
+	margin: 20px;
+	font-size: 20px;
+	background: #AAAACC
+}
+</style>
+
+<script type="text/javascript">
+
+var aaTable = {'UUU':"phe", 'UUC':"phe", 'UUA':"leu", 'UUG':"leu",
+           'CUU':"leu", 'CUC':"leu", 'CUA':"leu", 'CUG':"leu",
+           'AUU':"ile", 'AUC':"ile", 'AUA':"ile", 'AUG':"met",
+           'GUU':"val", 'GUC':"val", 'GUA':"val", 'GUG':"val",
+           'UCU':"ser", 'UCC':"ser", 'UCA':"ser", 'UCG':"ser",
+           'CCU':"pro", 'CCC':"pro", 'CCA':"pro", 'CCG':"pro",
+           'ACU':"thr", 'ACC':"thr", 'ACA':"thr", 'ACG':"thr",
+           'GCU':"ala", 'GCC':"ala", 'GCA':"ala", 'GCG':"ala",
+           'UAU':"tyr", 'UAC':"tyr", 'UAA':"stop", 'UAG':"stop",
+           'CAU':"his", 'CAC':"his", 'CAA':"gln", 'CAG':"gln",
+           'AAU':"asn", 'AAC':"asn", 'AAA':"lys", 'AAG':"lys",
+           'GAU':"asp", 'GAC':"asp", 'GAA':"glu", 'GAG':"glu",
+           'UGU':"cys", 'UGC':"cys", 'UGA':"stop", 'UGG':"trp",
+           'CGU':"arg", 'CGC':"arg", 'CGA':"arg", 'CGG':"arg",
+           'AGU':"ser", 'AGC':"ser", 'AGA':"arg", 'AGG':"arg",
+           'GGU':"gly", 'GGC':"gly", 'GGA':"gly", 'GGG':"gly"
+		   };
+var letters = ['A', 'U', 'G', 'C'];
+
+function findPermutations(codon){
+	var permutations = [];
+	for(i = 0; i<3; i++){
+		for(letter = 0; letter < 4; letter++){
+			if(letters[letter] != codon[i]){
+				if(i == 0){
+					var p = letters[letter].concat(codon.substr(1));
+					permutations.push(p);
+				}else if(i == 1){
+					var p = codon[0].concat(letters[letter].concat(codon[2]));
+					permutations.push(p);
+				}else if(i == 2){
+					var p = codon.substr(0,2).concat(letters[letter]);
+					permutations.push(p);
+				}
+			}
+		}
+	}
+	return permutations;
+}
+
+function codonToName(list){
+	var nameList = [];
+	for(i = 0; i < list.length; i++){
+		nameList.push("<br>");
+		nameList.push(list[i]);
+		nameList.push(" (");
+		nameList.push(aaTable[list[i]]);
+		nameList.push(") ");
+	}
+	return nameList;
+}
+		   
+function decode(){
+	var userInput = document.getElementById('userInput').value.toUpperCase();;
+	if(userInput.length ==3 ){
+		document.getElementById('answer').innerHTML = userInput + " (" + aaTable[userInput] + ") can become any of the following with one mutation:" + codonToName(findPermutations(userInput)).join("");
+	}
+}
+</script>
+
+<body>
+
+
+
+<div id="wrapper">
+
+<h1>Amino Acid Mutation Calculator</h1>
+
+<h3>Input a codon (example: GAU, AUG)</h3>	
+<div></div>
+<input type = "text" id = 'userInput' value = '' />
+<input type="submit" value="Mutate!" onclick="javascript:decode()"/>
+	<div id="answer">
+		
+	</div>
+</div>
+
+</body>
+
+</html>
