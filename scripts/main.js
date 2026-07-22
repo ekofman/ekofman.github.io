@@ -163,6 +163,7 @@
     const show = (i) => {
       if (!activeList.length) return;
       idx = (i + activeList.length) % activeList.length;
+      lbImg.onerror = () => { lbImg.onerror = null; lbImg.src = activeList[idx].orig; };
       lbImg.src = activeList[idx].full; // full-size loads only when opened
       lbImg.alt = activeList[idx].alt;
       lbCap.textContent = activeList[idx].alt;
@@ -200,7 +201,14 @@
         const safe = String(file).replace(/"/g, "");
         const enc = encodeURIComponent(safe);
         const alt = safe.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ").trim();
-        return { thumb: base + "thumbs/" + enc, full: base + enc, alt: alt };
+        // build-artwork.sh writes WebP derivatives; the original is the fallback
+        const webp = encodeURIComponent(safe.replace(/\.[^.]+$/, "") + ".webp");
+        return {
+          thumb: base + "thumbs/" + webp,
+          full: base + "web/" + webp,
+          orig: base + enc,
+          alt: alt
+        };
       });
 
       grid.innerHTML = items
@@ -212,11 +220,11 @@
         )
         .join("");
 
-      // missing thumbnail -> fall back to the full image
+      // missing derivative -> fall back to the original image
       grid.querySelectorAll("img").forEach((img, i) => {
         img.addEventListener("error", function handler() {
           img.removeEventListener("error", handler);
-          img.src = items[i].full;
+          img.src = items[i].orig;
         });
       });
 
