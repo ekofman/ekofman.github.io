@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Kofman — Scientist, Songwriter, Cartoonist</title>
+  <meta name="description" content="The portfolio of Eric Kofman: original musicals and songwriting, art and cartoons, and computational biology." />
+
+  <!-- Fonts: Fraunces (theatrical display serif) · Space Grotesk (body) · Space Mono (annotations) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Cinzel:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== MARQUEE / STICKY NAV ===================== -->
+  <header class="marquee" id="marquee">
+    <a class="marquee__brand" href="#top" aria-label="Back to top">
+      <span class="marquee__mono">now playing</span>
+      <span class="marquee__name">Eric Kofman</span>
+    </a>
+
+    <nav class="marquee__nav" aria-label="Sections">
+      <a href="#stage" data-nav="stage">Musicals &amp; Songwriting</a>
+      <a href="#gallery" data-nav="gallery">Art &amp; Cartoons</a>
+      <a href="#lab" data-nav="lab">Science</a>
+      <a href="#contact" data-nav="contact" class="marquee__contact">Contact</a>
+    </nav>
+
+    <button class="marquee__toggle" id="navToggle" aria-expanded="false" aria-controls="marquee" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <main id="top">
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <figure class="hero__portrait reveal">
+          <div class="hero__arch">
+            <img src="images/headshot.jpg" alt="Portrait of Eric Kofman" />
+          </div>
+        </figure>
+
+        <div class="hero__about">
+          <h1 class="hero__name reveal">Eric&nbsp;Kofman</h1>
+
+          <p class="hero__roles reveal">
+            <span class="hero__rotator" id="rotator" aria-live="polite">
+              <span class="is-active">storyteller</span>
+            </span>
+          </p>
+
+          <div class="hero__bio reveal">
+            <p>
+              Artist? Or scientist? Eric Kofman could never decide what he wanted to be when he grew up &mdash; and he still can't. 
+            </p>
+            <p>
+              By day he builds tools to pull meaning out of the genome.
+            </p>
+            <p>
+              By night (and most weekends) he writes original musicals and songs, draws cartoons, and paints. 
+            </p>
+            <p>
+              Scroll down to see the results of both his day job and his moonlighting.
+            </p>
+          </div>
+
+          <div class="hero__links reveal">
+            <a href="#stage" class="btn btn--solid">See the work</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#stage" aria-label="Scroll to the first act">
+        <span>Scroll</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ===================== ACT I — MUSICALS & SONGWRITING ===================== -->
+    <section class="act act--stage" id="stage" data-accent="gold">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <p class="act__eyebrow"><span class="act__num">Act I</span></p>
+            <h2 class="act__title">Original Musicals and Songwriting</h2>
+            <p class="act__intro">
+              Full-length shows and musical sketch comedy revues, melody, lyrics and book. Two originals musicals,
+              plus the sketch revue that once won a &ldquo;battle to the comedy death.&rdquo; 
+            </p>
+          </div>
+        </aside>
+
+        <div class="act__content">
+
+      <!-- Feature: Snow White -->
+      <article class="show show--feature reveal" data-theme="snow">
+        <a class="show__banner" href="https://miragefactory.ludus.com/show_page.php?show_id=200539288" target="_blank" rel="noopener">
+          <img src="images/snowwhite-banner.png" alt="Snow White and the Seven Million Followers — a new musical" />
+        </a>
+        <div class="show__body">
+          <p class="show__kicker">Now booking</p>
+          <h3 class="show__title">Snow White &amp; the Seven Million Followers</h3>
+          <p class="show__text">
+            In a not-so-distant future where AI has decimated the creator economy, a mysterious
+            new social media platform dangles a lifeline before the world&rsquo;s desperate
+            influencers, offering them one last chance to maintain their livelihoods. But is the
+            deal too good to be true?
+          </p>
+          <p class="show__text">
+            A sharp commentary on the intersection of social media and AI, the collapse of
+            authenticity, and the unsettling possibility that in a world where everything might be
+            fake, the most dangerous lies are the ones we most desperately want to believe.
+          </p>
+          <span class="show__meta">AMT Theater &middot; October 15&ndash;18</span>
+          <div class="show__actions">
+            <a class="btn btn--solid" href="https://miragefactory.ludus.com/show_page.php?show_id=200539288" target="_blank" rel="noopener">Get tickets</a>
+            <a class="btn btn--ghost btn--ig" href="https://instagram.com/seven.million.musical" target="_blank" rel="noopener">
+              <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
+              @seven.million.musical
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Feature: Haber -->
+      <article class="show show--haber reveal" data-theme="haber">
+        <div class="show__body">
+          <p class="show__kicker">Original rock opera</p>
+          <a class="show__logo" href="https://habermusical.wordpress.com/about/" target="_blank" rel="noopener">
+            <img src="images/haber-logo.png" alt="Haber — a new musical" />
+          </a>
+          <p class="show__text">
+            An original rock opera about Fritz Haber &mdash; the chemist whose work fed billions yet
+            also fueled the worst excesses of the Great War. Though the events it depicts took place
+            a century ago, Haber&rsquo;s examination of its protagonist&rsquo;s life and work raises
+            still-relevant questions about the role scientists should play as moral stewards of
+            scientific progress.
+          </p>
+          <p class="show__text">
+            Staged as a concert-style reading at the Armory in Boston, 2019, to an audience of over a hundred. A few reviews from attendees:
+          </p>
+
+          <blockquote class="quote">
+            <p>&ldquo;We were singing the lyrics after the show was over!&rdquo;</p>
+          </blockquote>
+          <blockquote class="quote">
+            <p>&ldquo;The lyrics are outstanding &mdash; intelligent, alliterative, and they do a wonderful job carrying the story.&rdquo;</p>
+          </blockquote>
+
+          <p class="show__note">
+            Currently seeking producers interested in helping develop Haber toward a full theatrical
+            production. <a href="#contact">Reach out and let&rsquo;s chat &rarr;</a>
+          </p>
+
+          <div class="show__actions">
+            <a class="btn btn--solid btn--haber" href="https://habermusical.wordpress.com/about/" target="_blank" rel="noopener">Read the synopsis</a>
+            <a class="btn btn--ghost btn--haber" href="https://habermusical.wordpress.com/featured-demo-recordings/" target="_blank" rel="noopener">Hear demo recordings</a>
+          </div>
+        </div>
+
+        <div class="show__gallery">
+          <figure>
+            <img src="images/haber-reading-wide.webp" alt="The Haber staged reading in performance — cast in lab coats at music stands before a full house" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/haber-reading-closeup.jpg" alt="Close-up of performers at the Haber staged reading" loading="lazy" />
+          </figure>
+        </div>
+      </article>
+
+      <!-- Laugh Tracks -->
+      <article class="show show--comedy reveal" data-theme="comedy">
+        <a class="show__banner" href="https://youtu.be/LdGoA0C_Isg?si=RYnzyeDDZ4QfhXqP&t=291" target="_blank" rel="noopener">
+          <img src="images/battleroyale-banner.png" alt="Laugh Tracks performing live at ImprovBoston's Battle Royale">
+        </a>
+        <div class="show__body">
+          <p class="show__kicker">Sketch comedy</p>
+          <h3 class="show__title">Laugh Tracks</h3>
+          <p class="show__tag">
+            An original musical-comedy sketch show at ImprovBoston (2018), co-written with Hannah Petosa
+            and performed with Hannah Petosa, and Ethan Wilcox. The Laugh Tracks team, as they called themselves, took first place in
+            ImprovBoston&rsquo;s Battle Royale &mdash; billed as a &ldquo;sketch and standup battle to the comedy death.&rdquo;
+          </p>
+          <div class="show__actions">
+            <a class="btn btn--ghost" href="https://youtu.be/LdGoA0C_Isg?si=RYnzyeDDZ4QfhXqP&t=291" target="_blank" rel="noopener">Watch the winning set</a>
+          </div>
+        </div>
+      </article>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- ===================== ACT II — ART & CARTOONS ===================== -->
+    <section class="act act--gallery" id="gallery" data-accent="coral">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <p class="act__eyebrow"><span class="act__num">Act II</span></p>
+            <h2 class="act__title">Art and Cartoons</h2>
+            <p class="act__intro">
+              Cartoons, illustrations and paintings. Please reach out if you'd like to work together on artistic collaborations.
+            </p>
+          </div>
+        </aside>
+
+        <div class="act__content">
+
+      <h3 class="subhead">Artwork and cartoons published in the New Yorker</h3>
+      <p class="subhead__note">A Daily Cartoon, plus illustrations for Daily Shouts pieces by Ginny Hogan.</p>
+      <div class="linklist reveal">
+        <a class="linkrow" href="https://www.newyorker.com/cartoons/daily-cartoon/thursday-february-2nd-groundhog-day" target="_blank" rel="noopener">
+          <span class="linkrow__title">Daily Cartoon: Groundhog Day</span>
+          <span class="linkrow__meta">Daily Cartoon &rarr;</span>
+        </a>
+        <a class="linkrow" href="https://www.newyorker.com/humor/daily-shouts/punishments-for-children-that-id-love-as-an-adult" target="_blank" rel="noopener">
+          <span class="linkrow__title">Punishments for Children That I&rsquo;d Love as an Adult</span>
+          <span class="linkrow__meta">Daily Shouts &rarr;</span>
+        </a>
+        <a class="linkrow" href="https://www.newyorker.com/humor/daily-shouts/valentines-day-cards-for-libertarians" target="_blank" rel="noopener">
+          <span class="linkrow__title">Valentine&rsquo;s Day Cards for Libertarians</span>
+          <span class="linkrow__meta">Daily Shouts &rarr;</span>
+        </a>
+      </div>
+
+      <h3 class="subhead">Cartoons</h3>
+      <div class="gallery__grid reveal" id="cartoonsGrid">
+        <!--
+          Cartoons load automatically from images/artwork/cartoons/ (any filenames).
+          Paintings load from images/artwork/paintings/. Drop images into those folders,
+          then run  bash build-artwork.sh  to make thumbnails and refresh the lists.
+          Placeholders below show only until the first image is added.
+        -->
+        <figure class="frame frame--empty"><figcaption>Add cartoons to images/artwork/cartoons/</figcaption></figure>
+        <figure class="frame frame--empty"><figcaption>Frame reserved</figcaption></figure>
+        <figure class="frame frame--empty"><figcaption>Frame reserved</figcaption></figure>
+      </div>
+
+      <h3 class="subhead">Paintings</h3>
+      <div class="gallery__grid reveal" id="paintingsGrid">
+        <figure class="frame frame--empty"><figcaption>Add paintings to images/artwork/paintings/</figcaption></figure>
+        <figure class="frame frame--empty"><figcaption>Frame reserved</figcaption></figure>
+        <figure class="frame frame--empty"><figcaption>Frame reserved</figcaption></figure>
+      </div>
+
+      <a class="gallery__cta reveal" href="https://instagram.com/eric.kofman" target="_blank" rel="noopener">
+        <span class="gallery__cta-mono">the full sketchbook on instagram &rarr;</span>
+        <span class="gallery__cta-handle">
+          <svg class="ig-icon ig-icon--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
+          @eric.kofman
+        </span>
+      </a>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- ===================== ACT III — SCIENCE ===================== -->
+    <section class="act act--lab" id="lab" data-accent="teal">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <p class="act__eyebrow"><span class="act__num">Act III</span></p>
+            <h2 class="act__title">Science</h2>
+            <p class="act__intro">
+              Computational biology and the software behind it &mdash; peer-reviewed work and
+              open-source tools anyone can pick up and run.
+            </p>
+          </div>
+        </aside>
+
+        <div class="act__content">
+
+      <h3 class="subhead">Publications and tools</h3>
+      <div class="lab__grid">
+        <article class="paper reveal">
+          <p class="paper__label">Fig. 1 &mdash; Publication</p>
+          <h3 class="paper__title">Peer-reviewed research in <em>Nature</em></h3>
+          <p class="paper__text">
+            &ldquo;Single-cell and isoform-specific translational profiling of the mouse brain&rdquo;, <em>Nature 2026</em> &mdash; co-first author. 
+            Read the full article for the methods, figures, and findings.
+          </p>
+          <a class="btn btn--ghost btn--teal" href="https://www.nature.com/articles/s41586-026-10118-1" target="_blank" rel="noopener">Read the paper</a>
+        </article>
+
+        <article class="paper reveal">
+          <p class="paper__label">Fig. 2 &mdash; Publication</p>
+          <h3 class="paper__title">STAMP in <em>Nature Methods</em></h3>
+          <p class="paper__text">
+            &ldquo;Robust single-cell discovery of RNA targets of RNA-binding proteins and ribosomes&rdquo;
+            &mdash; contributed the computational analyses. <em>Nature Methods</em>, 2021.
+          </p>
+          <a class="btn btn--ghost btn--teal" href="https://www.nature.com/articles/s41592-021-01128-0" target="_blank" rel="noopener">Read the paper</a>
+        </article>
+
+        <article class="paper reveal">
+          <p class="paper__label">Fig. 3 &mdash; Publication</p>
+          <h3 class="paper__title">RNA base editors in <em>Nature Communications</em></h3>
+          <p class="paper__text">
+            &ldquo;Expanded palette of RNA base editors for comprehensive RBP&ndash;RNA interactome
+            studies&rdquo; &mdash; second author. <em>Nature Communications</em>, 2024.
+          </p>
+          <a class="btn btn--ghost btn--teal" href="https://www.nature.com/articles/s41467-024-45009-4" target="_blank" rel="noopener">Read the paper</a>
+        </article>
+
+        <article class="paper reveal">
+          <p class="paper__label">Fig. 4 &mdash; Publication</p>
+          <h3 class="paper__title">FLARE in <em>BMC Bioinformatics</em></h3>
+          <p class="paper__text">
+            &ldquo;FLARE: a fast and flexible workflow for identifying RNA editing foci&rdquo; &mdash;
+            a Snakemake pipeline for finding regions enriched for RNA editing. Kofman, Yee,
+            Medina-Munoz &amp; Yeo, 2023.
+          </p>
+          <a class="btn btn--ghost btn--teal" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10544219/" target="_blank" rel="noopener">Read the paper</a>
+        </article>
+
+        <article class="paper reveal">
+          <p class="paper__label">Fig. 5 &mdash; Review</p>
+          <h3 class="paper__title">Immune checkpoint genomics in <em>Genome Medicine</em></h3>
+          <p class="paper__text">
+            &ldquo;Genomics of response to immune checkpoint therapies for cancer: implications for
+            precision medicine&rdquo; &mdash; co-first author. A review in <em>Genome Medicine</em>, 2018.
+          </p>
+          <a class="btn btn--ghost btn--teal" href="https://link.springer.com/article/10.1186/s13073-018-0605-7" target="_blank" rel="noopener">Read the review</a>
+        </article>
+
+        <article class="paper reveal">
+          <p class="paper__label">Fig. 6 &mdash; Software</p>
+          <h3 class="paper__title">MARINE</h3>
+          <p class="paper__text">
+            MARINE is an open-source algorithm designed for RNA edit-calling at single-cell and isoform-level resolution, developed for the single-cell STAMP publication and maintained on GitHub.
+            Built for reproducibility &mdash; clone it, run it, cite it.
+          </p>
+          <a class="btn btn--ghost btn--teal" href="https://github.com/YeoLab/MARINE" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+        <article class="paper reveal">
+          <p class="paper__label">Fig. 7 &mdash; Software</p>
+          <h3 class="paper__title">FLARE</h3>
+          <p class="paper__text">
+            The FLARE open-source pipeline itself, maintained on GitHub under the Yeo Lab and free for
+            anyone to clone, run, and build on.
+          </p>
+          <a class="btn btn--ghost btn--teal" href="https://github.com/YeoLab/FLARE" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+      </div>
+
+      <h3 class="subhead">Scientific writing and illustration</h3>
+      <p class="subhead__note">Research stories written and illustrated for <em>Epigenie</em>.</p>
+      <div class="lab__grid">
+        <article class="paper paper--illus reveal">
+          <img class="paper__icon" src="images/epigene_artwork/YTHDF2.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+          <p class="paper__label">Fig. 8 &mdash; Writing &amp; illustration</p>
+          <h3 class="paper__title">Burn After Reading: YTHDF2 and cancer&rsquo;s protein problems</h3>
+          <p class="paper__text">How the m6A mRNA reader YTHDF2 helps cancer cells manage their protein problems.</p>
+          <a class="btn btn--ghost btn--teal" href="https://epigenie.com/burn-after-reading-m6a-mrna-reader-ythdf2-helps-cancer-cells-manage-their-protein-problems/" target="_blank" rel="noopener">Read the article</a>
+        </article>
+
+        <article class="paper paper--illus reveal">
+          <img class="paper__icon" src="images/epigene_artwork/OldAndYoung.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+          <p class="paper__label">Fig. 9 &mdash; Writing &amp; illustration</p>
+          <h3 class="paper__title">How to Change Your Mini-Mind</h3>
+          <p class="paper__text">5hmC&rsquo;s role in neurodevelopment and Alzheimer&rsquo;s disease.</p>
+          <a class="btn btn--ghost btn--teal" href="https://epigenie.com/how-to-change-your-mini-mind-5hmcs-role-in-neurodevelopment-and-alzheimers-disease/" target="_blank" rel="noopener">Read the article</a>
+        </article>
+
+        <article class="paper paper--illus reveal">
+          <img class="paper__icon" src="images/epigene_artwork/Waldo.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+          <p class="paper__label">Fig. 10 &mdash; Writing &amp; illustration</p>
+          <h3 class="paper__title">Where&rsquo;s the Cancer Driver?</h3>
+          <p class="paper__text">MethSig cuts through the background noise to identify oncogenic promoter hypermethylation.</p>
+          <a class="btn btn--ghost btn--teal" href="https://epigenie.com/wheres-the-cancer-driver-methsig-cuts-through-the-background-noise-to-identify-oncogenic-promoter-hypermethylation/" target="_blank" rel="noopener">Read the article</a>
+        </article>
+
+        <article class="paper paper--illus reveal">
+          <img class="paper__icon" src="images/epigene_artwork/CELFIE.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+          <p class="paper__label">Fig. 11 &mdash; Writing &amp; illustration</p>
+          <h3 class="paper__title">Selfies from Beyond the Grave</h3>
+          <p class="paper__text">CELFIE deconvolutes cell-free DNA methylation messages.</p>
+          <a class="btn btn--ghost btn--teal" href="https://epigenie.com/selfies-from-beyond-the-grave-celfie-deconvolutes-cell-free-dna-methylation-messages/" target="_blank" rel="noopener">Read the article</a>
+        </article>
+      </div>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- ===================== CONTACT / FOOTER ===================== -->
+    <footer class="curtain" id="contact">
+      <div class="curtain__inner reveal">
+        <p class="curtain__eyebrow">End of program</p>
+        <h2 class="curtain__title">Let&rsquo;s make something.</h2>
+        <p class="curtain__text">
+          For bookings, collaborations, compliments or critiques, reach out through any of the channels below.
+        </p>
+        <div class="curtain__links">
+          <a href="https://instagram.com/eric.kofman" target="_blank" rel="noopener">
+            <svg class="ft-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/ekofman/" target="_blank" rel="noopener">
+            <svg class="ft-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.75-2.05 4 0 4.75 2.63 4.75 6.05V21h-4.02v-5.4c0-1.3 0-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <p class="curtain__credit">Eric Kofman &middot; scientist, songwriter, cartoonist</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="images/artwork/manifest.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
