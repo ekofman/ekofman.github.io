@@ -16,12 +16,22 @@ site/
 
 ## Run it
 Open `index.html` in any browser — no build step, no server needed.
-(To host it: upload the whole folder to Netlify, GitHub Pages, etc.)
+
+## Publish it
+The site is live at **https://erickofman.com**, served by GitHub Pages from the
+`main` branch of `ekofman/ekofman.github.io`. To publish changes:
+
+```
+git add -A && git commit -m "what changed" && git push
+```
+
+It goes live in under a minute. (The `CNAME` and `.nojekyll` files make the custom
+domain work — leave them alone.)
 
 ## Editing notes
 - **Your name / identity** appears in `index.html` (title, marquee, hero, footer).
   I inferred "Eric Kofman" from your materials — find & replace if that's off.
-- **Add cartoons & paintings:** put images (any names) into `images/artwork/cartoons/` and `images/artwork/paintings/`, then run `bash build-artwork.sh` from the site folder. It makes fast-loading thumbnails (via macOS's `sips`) and lists them automatically under the Cartoons and Paintings subsections — no renaming, no editing `index.html`. Clicking an image opens it full-size in a lightbox. Re-run the script after adding/removing images. (To add another group like "sketches", see `images/artwork/README.txt`.)
+- **Add cartoons & paintings:** put images (any names) into `images/artwork/cartoons/` and `images/artwork/paintings/`, then run `bash build-artwork.sh` from the site folder. It makes fast-loading WebP copies (needs `cwebp` — `brew install webp`) and lists them automatically under the Cartoons and Paintings subsections — no renaming, no editing `index.html`. Clicking an image opens it full-size in a lightbox. Re-run the script after adding/removing images. (To add another group like "sketches", see `images/artwork/README.txt`.)
 - **Add a comic PDF:** a PDF can't render inside an image frame. Put it in `files/`
   and uncomment the `frame frame--pdf` download tile in the gallery grid, pointing
   `href` at your file.
