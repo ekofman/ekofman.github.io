@@ -941,9 +941,10 @@ a.show__banner:hover img { transform: scale(1.03); }
   border-radius: 4px;
   background: rgba(255,255,255,0.03);
   opacity: 0;
-  transition: opacity 0.9s var(--ease);
+  visibility: hidden; /* so the faded-out ad can't intercept taps on what's beneath it */
+  transition: opacity 0.9s var(--ease), visibility 0.9s;
 }
-.realitea.is-visible { opacity: 1; }
+.realitea.is-visible { opacity: 1; visibility: visible; }
 /* hover (or tap): the logo dissolves to reveal the pitch underneath */
 .realitea__pitch {
   position: absolute; inset: 0;
@@ -1022,7 +1023,27 @@ a.show__banner:hover img { transform: scale(1.03); }
 }
 .realitea__frames img.is-on { opacity: 1; }
 @media (min-width: 1000px) { .act--show .act__grid { margin-right: var(--sw-shift); } }
-@media (max-width: 999px) { .realitea { display: none; } }
+/* phones and tablets: no side column, so the ad becomes a sticky banner along
+   the bottom edge — the mobile-ad idiom. The pitch still sits over the logo. */
+@media (max-width: 999px) {
+  .realitea {
+    left: 0; right: 0; bottom: 0; top: auto;
+    width: auto;
+    transform: none;
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom)) 0.75rem;
+    border-width: 1px 0 0;
+    border-radius: 0;
+    background: var(--ink);
+  }
+  .realitea__label { margin: 0; flex: none; }
+  .realitea__sponsor { display: none; }
+  .realitea__frames { flex: 1; min-width: 0; height: 64px; aspect-ratio: auto; }
+  .realitea__pitch { font-size: 0.66rem; line-height: 1.5; }
+  .realitea__close { position: static; order: 1; flex: none; padding: 0.25rem 0.4rem; }
+  /* keep the footer's last line clear of the banner */
+  .curtain--show { padding-bottom: calc(clamp(5rem, 12vw, 8rem) + 64px + env(safe-area-inset-bottom)); }
+}
 
 /* ---------- people rows (cast + creative team) ---------- */
 .people { display: grid; grid-template-columns: 1fr; gap: 1rem; }
