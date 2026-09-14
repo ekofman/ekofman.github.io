@@ -702,7 +702,9 @@ a.show__banner:hover img { transform: scale(1.03); }
   .hero__glow { top: 30%; left: 50%; }
 
   .marquee__nav {
-    position: fixed;
+    /* absolute (not fixed): the header is the containing block either way,
+       even on the show page where it has no backdrop-filter */
+    position: absolute;
     inset: 0 0 auto 0;
     top: 100%;
     flex-direction: column;
