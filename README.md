@@ -30,6 +30,11 @@ git add -A && git commit -m "what changed" && git push
 It goes live in under a minute. (The `CNAME` and `.nojekyll` files make the custom
 domain work — leave them alone.)
 
+A pre-commit hook runs `stamp-assets.sh`, which tags every local CSS/JS link with
+a content hash (`styles.css?v=bd970842`) so phones refetch changed files instead of
+serving a stale cached copy. If the hook is missing (fresh clone), run
+`bash stamp-assets.sh` before committing.
+
 ## Editing notes
 - **Your name / identity** appears in `index.html` (title, marquee, hero, footer).
   I inferred "Eric Kofman" from your materials — find & replace if that's off.

@@ -24,6 +24,17 @@ until ! curl -s https://erickofman.com/ | grep -q "<old text>"; do sleep 5; done
 
 Run that with `run_in_background: true` and keep working; you'll be notified.
 
+Local CSS/JS links carry a content-hash `?v=` stamp so phones refetch changed
+files instead of serving a cached copy for the rest of Pages' 10-minute max-age.
+`stamp-assets.sh` rewrites them; a local pre-commit hook (`.git/hooks/pre-commit`,
+not in the repo) runs it and re-adds the HTML. If the hook is gone, run
+`bash stamp-assets.sh` before committing. The hook must be reinstalled on a fresh
+clone:
+
+```
+printf '#!/usr/bin/env bash\nbash stamp-assets.sh && git add -- *.html\n' > .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+```
+
 Ask before pushing unless the user has said to. Edits here are outward-facing —
 this is a live personal site under the user's own name.
 
