@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snow White &amp; the Seven Million Followers — a new musical by Eric Kofman</title>
+  <meta name="description" content="Snow White and the Seven Million Followers: a darkly funny new musical about social media, AI, and the collapse of authenticity. AMT Theater, New York, October 15–18." />
+
+  <meta property="og:title" content="Snow White & the Seven Million Followers — a new musical" />
+  <meta property="og:description" content="Who influences the influencers? A darkly funny new musical at AMT Theater, October 15–18." />
+  <meta property="og:image" content="https://erickofman.com/images/snowwhite-banner.webp" />
+  <meta property="og:url" content="https://erickofman.com/snow-white.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Cinzel:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-show">
+
+  <!-- ===================== MARQUEE / STICKY NAV ===================== -->
+  <header class="marquee" id="marquee">
+    <a class="marquee__brand marquee__brand--show" href="#top" aria-label="Back to top">
+      <img class="marquee__logo" src="images/snowwhite-banner.webp" alt="Snow White and the Seven Million Followers" decoding="async" />
+    </a>
+
+    <nav class="marquee__nav" aria-label="Sections">
+      <a href="#synopsis" data-nav="synopsis">Synopsis</a>
+      <a href="#cast" data-nav="cast">Cast</a>
+      <a href="#team" data-nav="team">Creative team</a>
+      <a href="https://miragefactory.ludus.com/index.php?sections=events" target="_blank" rel="noopener" class="marquee__contact marquee__contact--solid">Get tickets</a>
+    </nav>
+
+    <button class="marquee__toggle" id="navToggle" aria-expanded="false" aria-controls="marquee" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <main id="top">
+    <section class="hero hero--show" id="hero">
+      <div class="hero__glow hero__glow--show" aria-hidden="true"></div>
+
+      <div class="showhero reveal">
+        <h1 class="sr-only">Snow White &amp; the Seven Million Followers &mdash; a new musical</h1>
+        <p class="showhero__meta">
+          <span>AMT Theater, New York</span>
+          <span class="showhero__dot" aria-hidden="true">&middot;</span>
+          <span>October 15&ndash;18, 2026</span>
+        </p>
+
+        <a class="showhero__banner" href="https://miragefactory.ludus.com/index.php?sections=events" target="_blank" rel="noopener">
+          <img src="images/snowwhite-banner.webp" alt="Who influences the influencers? Snow White and the Seven Million Followers — a new musical" fetchpriority="high" />
+        </a>
+
+        <p class="showhero__tag">
+          A darkly funny new musical about social media and AI, the collapse of authenticity,
+          and the unsettling possibility that the most dangerous lies are the ones we most
+          desperately want to believe.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== SYNOPSIS ===================== -->
+    <section class="act act--show" id="synopsis" data-accent="poison">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <h2 class="act__title">Synopsis</h2>
+          </div>
+        </aside>
+
+        <div class="act__content">
+          <div class="synopsis reveal">
+            <div class="synopsis__text">
+              <p class="show__text">
+                In a not-so-distant future, AI has decimated the creator economy and left the
+                world&rsquo;s influencers fighting for their survival. A mysterious new social media
+                platform offers them one last chance to maintain their fame, relevance, and
+                livelihoods. But is the deal too good to be true?
+              </p>
+            </div>
+          </div>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- RealiTea logo: fixed to the left column once the synopsis is reached,
+         cycling through creepier variants as the reader scrolls (scripts/snowwhite.js) -->
+    <div class="realitea" id="realitea">
+      <p class="realitea__label"><span class="realitea__ad">Ad</span> Sponsored by</p>
+      <button class="realitea__close" id="realiteaClose" type="button" aria-label="Close ad">&times;</button>
+      <div class="realitea__frames">
+        <img src="images/snowwhite/logo/1.webp" alt="" class="is-on" decoding="async" />
+        <img src="images/snowwhite/logo/2.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/3.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/4.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/5.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/6.webp" alt="" decoding="async" />
+        <p class="realitea__pitch">RealiTea is now hiring influencers. Come see the show to learn more.</p>
+      </div>
+    </div>
+
+    <!-- the "close ad" gag -->
+    <div class="nope" id="nope" hidden>
+      <div class="nope__box" role="dialog" aria-modal="true" aria-labelledby="nopeTitle">
+        <p class="nope__title" id="nopeTitle">Are you sure?</p>
+        <button class="btn btn--solid nope__btn" id="nopeNo" type="button">No</button>
+      </div>
+    </div>
+
+    <!-- ===================== CAST ===================== -->
+    <section class="act act--show" id="cast" data-accent="poison">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <h2 class="act__title">The cast</h2>
+          </div>
+        </aside>
+
+        <div class="act__content">
+          <!-- Cards are rendered by scripts/snowwhite.js from images/snowwhite/people.js,
+               which build-snowwhite.sh generates from the show's descriptions.txt. -->
+          <div class="people" id="castGrid" data-group="Cast"></div>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- ===================== CREATIVE TEAM ===================== -->
+    <section class="act act--show" id="team" data-accent="poison">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <h2 class="act__title">Creative team</h2>
+          </div>
+        </aside>
+
+        <div class="act__content">
+          <div class="people" id="teamGrid" data-group="Creative team"></div>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- ===================== TICKETS ===================== -->
+    <section class="act act--show" id="tickets" data-accent="poison">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <h2 class="act__title">Tickets</h2>
+          </div>
+        </aside>
+
+        <div class="act__content">
+          <article class="venue reveal">
+            <p class="show__kicker">Now booking</p>
+            <h3 class="venue__title">AMT Theater</h3>
+            <p class="venue__address">
+              <a href="https://maps.google.com/?q=AMT+Theater,+354+W+45th+St,+New+York,+NY+10036" target="_blank" rel="noopener">354 W 45th St, New York, NY 10036</a>
+            </p>
+            <p class="venue__dates">October 15&ndash;18, 2026</p>
+            <div class="show__actions">
+              <a class="btn btn--solid" href="https://miragefactory.ludus.com/index.php?sections=events" target="_blank" rel="noopener">Get tickets</a>
+              <a class="btn btn--ghost btn--ig" href="https://instagram.com/seven.million.musical" target="_blank" rel="noopener">
+                <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
+                Follow the show
+              </a>
+            </div>
+          </article>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="curtain curtain--show" id="contact">
+      <div class="curtain__inner reveal">
+        <p class="curtain__eyebrow">End of program</p>
+        <h2 class="curtain__title">Follow, like, subscribe.</h2>
+        <p class="curtain__text">
+          Press, producers, and anyone who wants to talk about the show &mdash; get in touch.
+        </p>
+        <div class="curtain__links">
+          <a href="https://instagram.com/seven.million.musical" target="_blank" rel="noopener">
+            <svg class="ft-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
+            @seven.million.musical
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="images/snowwhite/people.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/snowwhite.js"></script>
+</body>
+</html>

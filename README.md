@@ -6,9 +6,11 @@ by its own spotlight as you scroll into it.
 ## Structure
 ```
 site/
-├── index.html          all the page content
+├── index.html          the main page
+├── snow-white.html     the Snow White & the Seven Million Followers show page
 ├── css/styles.css      the design system (colors, type, layout, animation)
 ├── scripts/main.js     scroll reveals, sticky nav + headings, mobile menu, role rotator
+├── scripts/snowwhite.js  cast & creative-team cards on the show page
 ├── images/             headshot, banners, logo, photos — and your cartoon images
 ├── files/              downloadable files (e.g. a comic PDF)
 └── fonts/              your licensed Latin CT webfont files (see fonts/README.txt)
@@ -32,6 +34,11 @@ domain work — leave them alone.)
 - **Your name / identity** appears in `index.html` (title, marquee, hero, footer).
   I inferred "Eric Kofman" from your materials — find & replace if that's off.
 - **Add cartoons & paintings:** put images (any names) into `images/artwork/cartoons/` and `images/artwork/paintings/`, then run `bash build-artwork.sh` from the site folder. It makes fast-loading WebP copies (needs `cwebp` — `brew install webp`) and lists them automatically under the Cartoons and Paintings subsections — no renaming, no editing `index.html`. Clicking an image opens it full-size in a lightbox. Re-run the script after adding/removing images. (To add another group like "sketches", see `images/artwork/README.txt`.)
+- **Snow White cast & creative team:** edit
+  `~/Documents/SnowWhiteMusical/Assets/Headshots/descriptions.txt` (names, roles,
+  headshot filenames and bios — the format is explained at the top of the file),
+  then run `bash build-snowwhite.sh` from the site folder. It converts the
+  headshots and regenerates the cards on `snow-white.html`. Commit and push to publish.
 - **Add a comic PDF:** a PDF can't render inside an image frame. Put it in `files/`
   and uncomment the `frame frame--pdf` download tile in the gallery grid, pointing
   `href` at your file.

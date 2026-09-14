@@ -68,6 +68,32 @@ back to the original if a derivative 404s — so a missing derivative degrades
 quietly instead of showing a broken image. Don't "fix" a slow-loading image by
 repointing it at the original; regenerate the derivative.
 
+### Snow White show page (`snow-white.html`)
+
+Cast and creative-team cards come from a bios document that lives **outside the
+repo**, with the show's other assets:
+
+```
+/Users/erickofman/Documents/SnowWhiteMusical/Assets/Headshots/descriptions.txt
+```
+
+Its format (one `== Name | Role | photo | focal-point` line per person, then bio
+paragraphs; `[Cast]` / `[Creative team]` group headers) is documented at the top
+of the file. After the user edits it or drops in new headshots:
+
+```
+bash build-snowwhite.sh
+```
+
+That parses the doc into `images/snowwhite/people.js`, converts each headshot to
+`images/snowwhite/people/<slug>.webp`, converts the six RealiTea logo variants to
+`images/snowwhite/logo/<n>.webp` (the scroll-linked logo), and
+deletes photos for people removed from the doc. `scripts/snowwhite.js` renders
+the cards. Don't hand-edit `people.js` or add people in the HTML — edit the doc
+and rerun. The ticket link is the Ludus public events page
+(`miragefactory.ludus.com/index.php?sections=events`); `/admin/…` Ludus URLs are
+the logged-in dashboard and won't work for visitors.
+
 Non-artwork images (banners, headshot, logo) are **not** covered by the script.
 Convert by hand and update the `src` in `index.html`:
 
