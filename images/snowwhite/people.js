@@ -52,7 +52,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/charlotte-polk.webp",
         "focus": "",
         "bio": [
-          "Charlotte Polk (she/they) is an actor, writer, and comedian from St. Louis. She's thrilled to be making her off-Broadway debut. Most recently, they can be seen as Cam in the web series i’m so happy for you!!!!!!. She loves citrus and lying down and you can find her online at ischarlottepolkstillalive.com"
+          "Charlotte Polk (she/they) is an actor, writer, and comedian from St. Louis. She's thrilled to be making her off-Broadway debut. Most recently, they can be seen as Cam in the web series *i’m so happy for you!!!!!!*. She loves citrus and lying down and you can find her online at ischarlottepolkstillalive.com"
         ]
       },
       {
@@ -84,7 +84,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/jordan-potash.webp",
         "focus": "",
         "bio": [
-          "Jordan Potash is a composer, producer, and multi-instrumentalist hailing from Massachusetts and currently based in NYC. Over the years he's contributed his signature brand of melodic and textural stylings to a wide range of works, including scoring Dogwood Pass, Trauma Bond and the mini-series The Impostor Syndrome.",
+          "Jordan Potash is a composer, producer, and multi-instrumentalist hailing from Massachusetts and currently based in NYC. Over the years he's contributed his signature brand of melodic and textural stylings to a wide range of works, including scoring *Dogwood Pass*, *Trauma Bond* and the mini-series *The Impostor Syndrome*.",
           "As a performer, he's played guitar, piano, and other instruments in groups spanning various genres, and has toured with acts including Darro, Jake Brewer, and Jillian Dawn. His producer credits include artists Terror by Two, Jake Erwin, and Julia Battistin. Jordan has also released music as a solo artist and as a part of the alt-rock duo 5 Day Weekend. https://www.jordanpotashmusic.com/."
         ]
       },
