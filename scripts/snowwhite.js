@@ -39,13 +39,20 @@
     window.addEventListener("load", () => { measure(); update(); });
     measure(); update();
 
-    // touch screens have no hover: tapping the logo toggles the pitch instead.
-    // Mouse users get hover only, so a stray click can't latch the pitch open.
+    // touch screens have no hover: a tap dissolves the logo into the pitch,
+    // which lingers a few seconds and then fades back on its own. Another tap
+    // restarts the clock. Mouse users get hover only.
     const framesEl = logo.querySelector(".realitea__frames");
     if (framesEl && window.matchMedia("(hover: none)").matches) {
-      framesEl.addEventListener("click", () => logo.classList.toggle("is-pitch"));
+      let timer = 0;
+      framesEl.addEventListener("click", () => {
+        logo.classList.add("is-pitch");
+        clearTimeout(timer);
+        timer = setTimeout(() => logo.classList.remove("is-pitch"), 3500);
+      });
     }
-    logo.addEventListener("pointerleave", () => logo.classList.remove("is-pitch"));
+    // a lifted finger also "leaves", so only a mouse moving away clears the pitch
+    logo.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") logo.classList.remove("is-pitch"); });
 
     // the ad's close button: "Are you sure?" — and the only answer is No
     const nope = document.getElementById("nope");
