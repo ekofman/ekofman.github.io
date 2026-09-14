@@ -43,7 +43,8 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/cameron-moser.webp",
         "focus": "",
         "bio": [
-          "Cameron Moser is thrilled to be a part of the cast of *Snow White and the Seven Million Followers*. Having been a performer in NY for years, Cameron often can be found on stage in both new works and beloved classics. Recent performances have included *She Loves Me*, *A Midsummer Night's Dream* (Bottom), *Twelfth Night* (Sir Andrew), *Best Little Whorehouse in Texas* (Melvin P. Thorpe), *The 25th Annual Putnam County Spelling Bee* (Leaf Coneybear) and *Spamalot* (Prince Herbert). He has also appeared in performances of new musicals such as *McMusical*, *Sing With Me: A New Musical*, *M for Marriage*, and *Forget I Said Anything*. Shout out to David and his family for their continuous support!"
+          "Cameron Moser is thrilled to be a part of the cast of *Snow White and the Seven Million Followers*. Having been a performer in NY for years, Cameron often can be found on stage in both new works and beloved classics. Recent performances have included *She Loves Me*, *A Midsummer Night's Dream* (Bottom), *Twelfth Night* (Sir Andrew), *Best Little Whorehouse in Texas* (Melvin P. Thorpe), *The 25th Annual Putnam County Spelling Bee* (Leaf Coneybear) and *Spamalot* (Prince Herbert). He has also appeared in performances of new musicals such as *McMusical*, *Sing With Me: A New Musical*, *M for Marriage*, and *Forget I Said Anything*. Shout out to David and his family for their continuous support!",
+          "https://www.cameron-moser.com/"
         ]
       },
       {
