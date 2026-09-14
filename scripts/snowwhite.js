@@ -39,9 +39,13 @@
     window.addEventListener("load", () => { measure(); update(); });
     measure(); update();
 
-    // touch screens have no hover: tapping the logo toggles the pitch instead
+    // touch screens have no hover: tapping the logo toggles the pitch instead.
+    // Mouse users get hover only, so a stray click can't latch the pitch open.
     const framesEl = logo.querySelector(".realitea__frames");
-    if (framesEl) framesEl.addEventListener("click", () => logo.classList.toggle("is-pitch"));
+    if (framesEl && window.matchMedia("(hover: none)").matches) {
+      framesEl.addEventListener("click", () => logo.classList.toggle("is-pitch"));
+    }
+    logo.addEventListener("pointerleave", () => logo.classList.remove("is-pitch"));
 
     // the ad's close button: "Are you sure?" — and the only answer is No
     const nope = document.getElementById("nope");
