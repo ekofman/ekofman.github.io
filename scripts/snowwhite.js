@@ -48,7 +48,7 @@
       framesEl.addEventListener("click", () => {
         logo.classList.add("is-pitch");
         clearTimeout(timer);
-        timer = setTimeout(() => logo.classList.remove("is-pitch"), 3500);
+        timer = setTimeout(() => logo.classList.remove("is-pitch"), 2000);
       });
     }
     // a lifted finger also "leaves", so only a mouse moving away clears the pitch
