@@ -141,7 +141,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/zachary-ahmad-kahloon.webp",
         "focus": "",
         "bio": [
-          "Zachary Ahmad-Kahloon (Lighting Design) Off-Broadway debut! Selected credits include work with New London Barn Playhouse (*The 25th Annual Putnam County Spelling Bee*, *Winter Wonderettes*, *Young Frankenstein*), Opera House Arts (*Outside Mullingar*), The Public Theatre (*Whit's End*), Seacoast Repertory Theatre (*HAIR*, *Natasha, Pierre & The Great Comet of 1812*, *Parade*). Zachary is the Resident Scenic and Lighting Designer and faculty at Walnut Hill School for the Arts, where he teaches Design & Production. More of his work can be found at www.zaklighting.com. @zahmadkahloon."
+          "Zachary Ahmad-Kahloon is excited to be making his Off-Broadway debut! Selected credits include work with New London Barn Playhouse (*The 25th Annual Putnam County Spelling Bee*, *Winter Wonderettes*, *Young Frankenstein*), Opera House Arts (*Outside Mullingar*), The Public Theatre (*Whit's End*), Seacoast Repertory Theatre (*HAIR*, *Natasha, Pierre & The Great Comet of 1812*, *Parade*). Zachary is the Resident Scenic and Lighting Designer and faculty at Walnut Hill School for the Arts, where he teaches Design & Production. More of his work can be found at www.zaklighting.com. @zahmadkahloon."
         ]
       },
       {
