@@ -131,7 +131,8 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/seth-tyler-black.webp",
         "focus": "",
         "bio": [
-          "Seth Tyler Black is an interdisciplinary artist and designer, experimenting with projections in theatres and exhibitions since 2011. Black can also be seen working in the art department in both film and theatrical productions, along with showcasing their own work."
+          "Seth Tyler Black is an interdisciplinary artist and designer, experimenting with projections in theatres and exhibitions since 2011. Black can also be seen working in the art department in both film and theatrical productions, along with showcasing their own work.",
+          "https://www.sethtylerblackstudio.com/"
         ]
       },
       {

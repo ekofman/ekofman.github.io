@@ -61,16 +61,19 @@
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  // Escape first, then turn @handles and bare domains into links.
-  // A trailing period after a handle is sentence punctuation, not part of it.
+  // Escape first, then turn full URLs, bare domains and @handles into links,
+  // in one pass so a link's own href never gets re-matched. Trailing sentence
+  // punctuation ("site.com.", "@handle,") stays outside the link.
+  const link = (href, text) =>
+    '<a href="' + href + '" target="_blank" rel="noopener">' + text + "</a>";
   const linkify = (text) =>
-    esc(text)
-      .replace(/(^|[\s(|])@([A-Za-z0-9_.]+?)\.?(?=[\s)|,;!?]|$)/g, (m, pre, h) =>
-        pre + '<a href="https://instagram.com/' + h + '" target="_blank" rel="noopener">@' + h + "</a>" +
-        (m.endsWith(".") ? "." : ""))
-      .replace(/(^|[\s(|])((?:www\.)?[A-Za-z0-9-]+\.(?:com|org|net|io|co)(?:\/\S*)?)\.?(?=[\s)|,;!?]|$)/g, (m, pre, d) =>
-        pre + '<a href="https://' + d + '" target="_blank" rel="noopener">' + d + "</a>" +
-        (m.endsWith(".") ? "." : ""));
+    esc(text).replace(
+      /(^|[\s(|])(?:(https?:\/\/[^\s<>()|]+?)|@([A-Za-z0-9_.]+?)|((?:[A-Za-z0-9-]+\.)+(?:com|org|net|io|co)(?:\/[^\s<>()|]*?)?))([.,;!?]*)(?=[\s)|]|$)/g,
+      (m, pre, url, handle, domain, punct) =>
+        pre +
+        (url ? link(url, url) : handle ? link("https://instagram.com/" + handle, "@" + handle) : link("https://" + domain, domain)) +
+        punct
+    );
 
   const initials = (name) =>
     name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("");
