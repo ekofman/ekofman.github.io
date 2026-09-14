@@ -1119,6 +1119,7 @@ a.show__banner:hover img { transform: scale(1.03); }
     radial-gradient(ellipse 70% 100% at 50% 100%, rgba(116,217,95,0.09), transparent 65%),
     var(--ink);
 }
+.curtain--show { border-top: 0; }
 .curtain--show .curtain__links a:hover { color: var(--poison); }
 
 @media (max-width: 640px) {

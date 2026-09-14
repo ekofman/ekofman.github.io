@@ -74,7 +74,9 @@ window.SNOWWHITE_PEOPLE = [
         "role": "Writer (Book, Music & Lyrics) and Lead Producer",
         "image": "images/snowwhite/people/eric-kofman.webp",
         "focus": "",
-        "bio": []
+        "bio": [
+          "Eric Kofman has written lyrics for rock songs, musical sketch comedy acts, rock operas and now musicals. He is especially interested in exploring the societal implications of new technologies in his work, a theme touched on in his first major musical project, Haber (https://habermusical.wordpress.com/), which saw a staged concert-style reading in 2019 and is still in development. He started working on Snow White and the Seven Million Followers in 2020 and is delighted to be working with such a stellar creative team and cast to finally bring the show to life this year. erickofman.com"
+        ]
       },
       {
         "name": "Jordan Potash",
@@ -102,7 +104,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/julianna-conte.webp",
         "focus": "",
         "bio": [
-          "https://www.julianaconte.com/"
+          "Juliana (she/they) is psyched to be a part of this team and collaborate with these incredible artists! They are a graduate of Cap21/Molloy College where they earned their BFA in Musical Theater. Juliana is a Vermont native currently living in NYC, with a passion for collaborative, new works of dance and theater. Her most recent choreography was featured in Imposter at The Flea Theater in collaboration with The Liminal Theater Collective. She gives endless thanks to her support system. She wouldn't be here without them! @julianaconte_. https://www.julianaconte.com/"
         ]
       },
       {
