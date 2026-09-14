@@ -9,7 +9,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/jenelle-catherina.webp",
         "focus": "",
         "bio": [
-          "Jenelle Catherina just moved here in August from Vegas and is absolutely thrilled to be here! She was last seen premiering *The Craft’d: An Unauthorized Musical Parody* in LA as Bonnie, as Mary in *Jesus Christ Superstar* at the Palace NH, as Jane Doe in *Ride the Cyclone* and occasionally Gale Weathers in the viral *Scream’d: An Unauthorized Musical Parody* with Majestic Rep, and singing with Santa Goofy at Hong Kong Disneyland. She is so excited to be a a part of bringing this project to life!",
+          "Jenelle Catherina just moved here in August from Vegas and is absolutely thrilled to be here! She was last seen premiering *The Craft’d: An Unauthorized Musical Parody* in LA as Bonnie, as Mary in *Jesus Christ Superstar* at the Palace NH, as Jane Doe in *Ride the Cyclone* and occasionally Gale Weathers in the viral *Scream’d: An Unauthorized Musical Parody* with Majestic Rep, and singing with Santa Goofy at Hong Kong Disneyland. She is so excited to be a part of bringing this project to life! She is represented by DDO Artists Agency.",
           "@jenellecatherina"
         ]
       },
