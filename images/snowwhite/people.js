@@ -9,7 +9,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/jenelle-catherina.webp",
         "focus": "",
         "bio": [
-          "Jenelle Catherina just moved here in August from Vegas and is absolutely thrilled to be here! She was last seen premiering The Craft’d: An Unauthorized Musical Parody in LA as Bonnie, as Mary in Jesus Christ Superstar at the Palace NH, as Jane Doe in Ride the Cyclone and occasionally Gale Weathers in the viral Scream’d: An Unauthorized Musical Parody with Majestic Rep, and singing with Santa Goofy at Hong Kong Disneyland. She is so excited to be a a part of bringing this project to life!",
+          "Jenelle Catherina just moved here in August from Vegas and is absolutely thrilled to be here! She was last seen premiering *The Craft’d: An Unauthorized Musical Parody* in LA as Bonnie, as Mary in *Jesus Christ Superstar* at the Palace NH, as Jane Doe in *Ride the Cyclone* and occasionally Gale Weathers in the viral *Scream’d: An Unauthorized Musical Parody* with Majestic Rep, and singing with Santa Goofy at Hong Kong Disneyland. She is so excited to be a a part of bringing this project to life!",
           "@jenellecatherina"
         ]
       },
@@ -43,7 +43,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/cameron-moser.webp",
         "focus": "",
         "bio": [
-          "Cameron Moser is thrilled to be a part of the cast of Snow White and the Seven Million Followers. Having been a performer in NY for years, Cameron often can be found on stage in both new works and beloved classics. Recent performances have included She Loves Me, A Midsummer Night's Dream (Bottom), Twelfth Night (Sir Andrew), Best Little Whorehouse in Texas (Melvin P. Thorpe), The 25th Annual Putnam County Spelling Bee (Leaf Coneybear) and Spamalot (Prince Herbert). He has also appeared in performances of new musicals such as McMusical, Sing With Me: A New Musical, M for Marriage, and Forget I Said Anything. Shout out to David and his family for their continuous support!"
+          "Cameron Moser is thrilled to be a part of the cast of *Snow White and the Seven Million Followers*. Having been a performer in NY for years, Cameron often can be found on stage in both new works and beloved classics. Recent performances have included *She Loves Me*, *A Midsummer Night's Dream* (Bottom), *Twelfth Night* (Sir Andrew), *Best Little Whorehouse in Texas* (Melvin P. Thorpe), *The 25th Annual Putnam County Spelling Bee* (Leaf Coneybear) and *Spamalot* (Prince Herbert). He has also appeared in performances of new musicals such as *McMusical*, *Sing With Me: A New Musical*, *M for Marriage*, and *Forget I Said Anything*. Shout out to David and his family for their continuous support!"
         ]
       },
       {
@@ -61,7 +61,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/kelly-brosnan.webp",
         "focus": "",
         "bio": [
-          "Kelly Brosnan (she/her) is thrilled to be making her Off-Broadway debut in Snow White & The Seven Million Followers! Other credits include Junie B.’s Essential Survival Guide to School (Junie B. Jones), Rent (Maureen u/s), and Dune! The Dunesical (Beast Rabban). She would like to thank her friends and family for their love and support, and the Snow White team for bringing her onto this hilarious project! @kebrosnan"
+          "Kelly Brosnan (she/her) is thrilled to be making her Off-Broadway debut in *Snow White & The Seven Million Followers*! Other credits include *Junie B.’s Essential Survival Guide to School* (Junie B. Jones), *Rent* (Maureen u/s), and *Dune! The Dunesical* (Beast Rabban). She would like to thank her friends and family for their love and support, and the Snow White team for bringing her onto this hilarious project! @kebrosnan"
         ]
       }
     ]
@@ -75,7 +75,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/eric-kofman.webp",
         "focus": "",
         "bio": [
-          "Eric Kofman has written lyrics for rock songs, musical sketch comedy acts, rock operas and now musicals. He is especially interested in exploring the societal implications of new technologies in his work, a theme touched on in his first major musical project, Haber (https://habermusical.wordpress.com/), which saw a staged concert-style reading in 2019 and is still in development. He started working on Snow White and the Seven Million Followers in 2020 and is delighted to be working with such a stellar creative team and cast to finally bring the show to life this year. erickofman.com"
+          "Eric Kofman has written lyrics for rock songs, musical sketch comedy acts, rock operas and now musicals. He is especially interested in exploring the societal implications of new technologies in his work, a theme touched on in his first major musical project, *Haber* (https://habermusical.wordpress.com/), which saw a staged concert-style reading in 2019 and is still in development. He started working on *Snow White and the Seven Million Followers* in 2020 and is delighted to be working with such a stellar creative team and cast to finally bring the show to life this year. erickofman.com"
         ]
       },
       {
@@ -94,8 +94,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/em-hausmann.webp",
         "focus": "",
         "bio": [
-          "Em Hausmann (they/them) is a Director and Theatre-Maker based in NYC with a focus on new works development for shows that are wonderfully weird and otherworldly, as well as queer and trans stories. Their work often explores and dissects gender, capitalism, trauma manifestations, internet culture, coming of age, and messy interpersonal relationships through the lens of larger-than-life characters in unusual and inexplicable circumstances. Em believes in the power of building community through theatre and in the importance of true collaboration to work towards a shared vision.",
-          "emhausmann.com"
+          "Em Hausmann is a Brooklyn-based theatre maker with a focus on development for new plays and musicals, with work spanning regionally, Off-Broadway, Off-Off-Broadway, and at various found/DIY venues across NYC. Em is passionate about championing emerging writers and building community through theatre-making processes that prioritize fun and laughter in the room. Select credits (Directing/Producing) include the world premieres of *crabby* (Ars Nova), *500 Rats: A Love Story* (HERE Arts Center), *Sea Glass* (The WP Theater), *Freak of the Week* (The Brick), *Nancy* (The Brick Aux), *Girltar Center* (Target Margin), *Your Best Odd Girl Out* (Philadelphia Fringe), *EL0N MU$K, Let Grime$ Go!* (Theaterlab), *Beethoven: Live in Concert* (Fort Salem Theater), *Miss Money HoneyBee* (The Madison Theatre), *Snow Bird* (Brooklyn Art Haus), *If You’re A Man at Night… You Gotta Be a Man in the Morning* (The Tank), *The Very Last Dance of Homeless Joe* (Theater for the New City). Associate member SDC. emhausmann.com @emhouseman"
         ]
       },
       {
@@ -104,7 +103,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/julianna-conte.webp",
         "focus": "",
         "bio": [
-          "Juliana (she/they) is psyched to be a part of this team and collaborate with these incredible artists! They are a graduate of Cap21/Molloy College where they earned their BFA in Musical Theater. Juliana is a Vermont native currently living in NYC, with a passion for collaborative, new works of dance and theater. Her most recent choreography was featured in Imposter at The Flea Theater in collaboration with The Liminal Theater Collective. She gives endless thanks to her support system. She wouldn't be here without them! @julianaconte_. https://www.julianaconte.com/"
+          "Juliana (she/they) is psyched to be a part of this team and collaborate with these incredible artists! They are a graduate of Cap21/Molloy College where they earned their BFA in Musical Theater. Juliana is a Vermont native currently living in NYC, with a passion for collaborative, new works of dance and theater. Her most recent choreography was featured in *Imposter* at The Flea Theater in collaboration with The Liminal Theater Collective. She gives endless thanks to her support system. She wouldn't be here without them! @julianaconte_. https://www.julianaconte.com/"
         ]
       },
       {
@@ -113,7 +112,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/ari-cleveland.webp",
         "focus": "",
         "bio": [
-          "Ari Cleveland is a multimedia artist specializing in sound design, AV production, and direction. They are drawn to works that amplify and celebrate the off-beat and unconventional. Select credits include Very Blue Light (The Tank), On Tuesdays We Fight (Soho Playhouse), Measure for Measure (The Maker's Space), strays (Dixon Place), ¡Violencia! (Repertorio Español), Needle & Bone (The Flea), White Elephant (Court Square Theatre), Is Cry You Cry'n (MCC Theater), Wanna Cyber? (Loading Dock Theatre) and 24 Hour Plays: Nationals '26 (Classic Stage Company). They were a 2026 Design Wing Fellow at the Great Plains Theatre Conference and co-host the theatrical review podcast, \"The Unobstructed Review.\" @ari.chillicothe"
+          "Ari Cleveland is a multimedia artist specializing in sound design, AV production, and direction. They are drawn to works that amplify and celebrate the off-beat and unconventional. Select credits include *Very Blue Light* (The Tank), *On Tuesdays We Fight* (Soho Playhouse), *Measure for Measure* (The Maker's Space), *strays* (Dixon Place), *¡Violencia!* (Repertorio Español), *Needle & Bone* (The Flea), *White Elephant* (Court Square Theatre), *Is Cry You Cry'n* (MCC Theater), *Wanna Cyber?* (Loading Dock Theatre) and *24 Hour Plays: Nationals '26* (Classic Stage Company). They were a 2026 Design Wing Fellow at the Great Plains Theatre Conference and co-host the theatrical review podcast, \"The Unobstructed Review.\" @ari.chillicothe"
         ]
       },
       {
@@ -122,7 +121,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/ellie-berry.webp",
         "focus": "57% 22%",
         "bio": [
-          "Ellie Berry is a recent Ithaca College graduate who is so excited to be the Stage Manager for Snow White and the Seven Million Followers! Recent credits include PSM of Matilda at Theatre Row, SM on THE MALL THE MALL THE MALL, Sub ASM on Vape! The Grease Parody, PSM on The Very Hungry Caterpillar show, and ASM on the Immersive Into the Woods. She wants to thank the amazing team for being so awesome to work with!"
+          "Ellie Berry is a recent Ithaca College graduate who is so excited to be the Stage Manager for *Snow White and the Seven Million Followers*! Recent credits include PSM of *Matilda* at Theatre Row, SM on *THE MALL THE MALL THE MALL*, Sub ASM on *Vape! The Grease Parody*, PSM on *The Very Hungry Caterpillar* show, and ASM on the Immersive *Into the Woods*. She wants to thank the amazing team for being so awesome to work with!"
         ]
       },
       {
@@ -141,7 +140,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/zachary-ahmad-kahloon.webp",
         "focus": "",
         "bio": [
-          "Zachary Ahmad-Kahloon (Lighting Design) Off-Broadway debut! Selected credits include work with New London Barn Playhouse (The 25th Annual Putnam County Spelling Bee, Winter Wonderettes, Young Frankenstein), Opera House Arts (Outside Mullingar), The Public Theatre (Whit's End), Seacoast Repertory Theatre (HAIR, Natasha, Pierre & The Great Comet of 1812, Parade). Zachary is the Resident Scenic and Lighting Designer and faculty at Walnut Hill School for the Arts, where he teaches Design & Production. More of his work can be found at www.zaklighting.com. @zahmadkahloon."
+          "Zachary Ahmad-Kahloon (Lighting Design) Off-Broadway debut! Selected credits include work with New London Barn Playhouse (*The 25th Annual Putnam County Spelling Bee*, *Winter Wonderettes*, *Young Frankenstein*), Opera House Arts (*Outside Mullingar*), The Public Theatre (*Whit's End*), Seacoast Repertory Theatre (*HAIR*, *Natasha, Pierre & The Great Comet of 1812*, *Parade*). Zachary is the Resident Scenic and Lighting Designer and faculty at Walnut Hill School for the Arts, where he teaches Design & Production. More of his work can be found at www.zaklighting.com. @zahmadkahloon."
         ]
       },
       {

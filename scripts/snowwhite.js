@@ -85,6 +85,9 @@
         (url ? link(url, url) : handle ? link("https://instagram.com/" + handle, "@" + handle) : link("https://" + domain, domain)) +
         punct
     );
+  // *Title* in the bios file -> italics (show titles). Runs after linkify, so
+  // the asterisks never end up inside an href.
+  const emphasize = (html) => html.replace(/\*([^*]+)\*/g, "<em>$1</em>");
 
   const initials = (name) =>
     name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("");
@@ -103,7 +106,7 @@
           '<h3 class="person__name">' + esc(p.name) + "</h3>" +
           (p.role ? '<p class="person__role">' + esc(p.role) + "</p>" : "") +
         "</div>" +
-        '<div class="person__bio">' + bio.map((t) => "<p>" + linkify(t) + "</p>").join("") + "</div>" +
+        '<div class="person__bio">' + bio.map((t) => "<p>" + emphasize(linkify(t)) + "</p>").join("") + "</div>" +
       "</article>"
     );
   };
