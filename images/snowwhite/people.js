@@ -20,7 +20,7 @@ window.SNOWWHITE_PEOPLE = [
         "focus": "",
         "bio": [
           "Nicky Quirindongo (Beau) is thrilled to be making his Off-Broadway debut! A native New Yorker born and raised in Morningside Heights, Nicky holds a BFA in Dramatic Arts (Acting Concentration) and an MA in Arts Management and Entrepreneurship through a dual-degree program at The New School.",
-          "Recent performance credits include appearing in a concert alongside Mandy Gonzalez and the New York Pops at Carnegie Hall for a tribute honoring Lin-Manuel Miranda (via R.Evolución Latina), directing and producing a Broadway cabaret (Stories From Latine Artists) at The Green Room 42, and taking on a role in a national commercial for a major insurance carrier.",
+          "Recent performance credits include appearing in a concert alongside Mandy Gonzalez and the New York Pops at Carnegie Hall for a tribute honoring Lin-Manuel Miranda (via R.Evolución Latina), directing and producing a Broadway cabaret (*Stories From Latine Artists*) at The Green Room 42, and taking on a role in a national commercial for a major insurance carrier.",
           "Offstage, Nicky is an avid supporter of New York sports, passionately cheering on the Knicks, Mets, Rangers, and Giants. He is represented by Linda Colonna at MC Talent Consultants, LLC."
         ]
       },
@@ -31,7 +31,7 @@ window.SNOWWHITE_PEOPLE = [
         "focus": "",
         "bio": [
           "Danielle Koenig has been lying to you. They go by Dani. And, yeah, maybe they should change their professional name to Dani, but that feels so casual. Life is full of so many choices. This one will have to happen later.",
-          "Dani - Danielle’s? - acting credits include Off-Broadway, Off-Off-Broadway, Off-Off-Off-Broadway, and Off-Off-Off-Off-Broadway credits. Among those roles, they’ve played a rat king, a well-intentioned ADHD news reporter, a butch sailor, and Michael Phelps. They also voiced Lucille Ball in Starring: Desi Arnaz for iHeart Radio.",
+          "Dani - Danielle’s? - acting credits include Off-Broadway, Off-Off-Broadway, Off-Off-Off-Broadway, and Off-Off-Off-Off-Broadway credits. Among those roles, they’ve played a rat king, a well-intentioned ADHD news reporter, a butch sailor, and Michael Phelps. They also voiced Lucille Ball in *Starring: Desi Arnaz* for iHeart Radio.",
           "Danielle - Dani’s? - writing has been developed by Second Stage, Prospect Musicals, Musical Theatre Factory, and Circle In The Square, and their songs have been heard at Joe’s Pub, 54 Below, and Lincoln Center’s Library for the Performing Arts.",
           "They hold a BA in Theatre from UCLA and an MFA in Musical Theatre Writing from NYU.",
           "DanielleKoenig.com | IG: @danielle_koenig"
@@ -112,7 +112,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/ari-cleveland.webp",
         "focus": "",
         "bio": [
-          "Ari Cleveland is a multimedia artist specializing in sound design, AV production, and direction. They are drawn to works that amplify and celebrate the off-beat and unconventional. Select credits include *Very Blue Light* (The Tank), *On Tuesdays We Fight* (Soho Playhouse), *Measure for Measure* (The Maker's Space), *strays* (Dixon Place), *¡Violencia!* (Repertorio Español), *Needle & Bone* (The Flea), *White Elephant* (Court Square Theatre), *Is Cry You Cry'n* (MCC Theater), *Wanna Cyber?* (Loading Dock Theatre) and *24 Hour Plays: Nationals '26* (Classic Stage Company). They were a 2026 Design Wing Fellow at the Great Plains Theatre Conference and co-host the theatrical review podcast, \"The Unobstructed Review.\" @ari.chillicothe"
+          "Ari Cleveland is a multimedia artist specializing in sound design, AV production, and direction. They are drawn to works that amplify and celebrate the off-beat and unconventional. Select credits include *Very Blue Light* (The Tank), *On Tuesdays We Fight* (Soho Playhouse), *Measure for Measure* (The Maker's Space), *strays* (Dixon Place), *¡Violencia!* (Repertorio Español), *Needle & Bone* (The Flea), *White Elephant* (Court Square Theatre), *Is Cry You Cry'n* (MCC Theater), *Wanna Cyber?* (Loading Dock Theatre) and *24 Hour Plays: Nationals '26* (Classic Stage Company). They were a 2026 Design Wing Fellow at the Great Plains Theatre Conference and co-host the theatrical review podcast, *The Unobstructed Review*. @ari.chillicothe"
         ]
       },
       {
