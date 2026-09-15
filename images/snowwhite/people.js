@@ -31,8 +31,8 @@ window.SNOWWHITE_PEOPLE = [
         "focus": "",
         "bio": [
           "Danielle Koenig has been lying to you. They go by Dani. And, yeah, maybe they should change their professional name to Dani, but that feels so casual. Life is full of so many choices. This one will have to happen later.",
-          "Dani - Danielle’s? - acting credits include Off-Broadway, Off-Off-Broadway, Off-Off-Off-Broadway, and Off-Off-Off-Off-Broadway credits. Among those roles, they’ve played a rat king, a well-intentioned ADHD news reporter, a butch sailor, and Michael Phelps. They also voiced Lucille Ball in *Starring: Desi Arnaz* for iHeart Radio.",
-          "Danielle - Dani’s? - writing has been developed by Second Stage, Prospect Musicals, Musical Theatre Factory, and Circle In The Square, and their songs have been heard at Joe’s Pub, 54 Below, and Lincoln Center’s Library for the Performing Arts.",
+          "Danielle’s acting credits include Off-Broadway, Off-Off-Broadway, Off-Off-Off-Broadway, and Off-Off-Off-Off-Broadway credits. Among those roles, they’ve played a rat king, a well-intentioned ADHD news reporter, a butch sailor, and Michael Phelps. They also voiced Lucille Ball in *Starring: Desi Arnaz* for iHeart Radio.",
+          "Danielle’s writing has been developed by Second Stage, Prospect Musicals, Musical Theatre Factory, and Circle In The Square, and their songs have been heard at Joe’s Pub, 54 Below, and Lincoln Center’s Library for the Performing Arts.",
           "They hold a BA in Theatre from UCLA and an MFA in Musical Theatre Writing from NYU.",
           "DanielleKoenig.com | IG: @danielle_koenig"
         ]
