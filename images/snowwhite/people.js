@@ -150,9 +150,7 @@ window.SNOWWHITE_PEOPLE = [
         "image": "images/snowwhite/people/federica-borlenghi.webp",
         "focus": "",
         "bio": [
-          "Federica is a Brooklyn-based, multi-hyphenate artist from Milan, Italy, with a primary focus on Writing and Directing. She specializes in developing original work for the stage. She is very collaborative, experimental, community, and process-driven, and focuses on art that addresses the unaddressed gravitating around womanhood, the immigrant experience, healing, and dysfunctional realities.",
-          "She also actively works in the industry as a Producer, Teaching Artist, Props Designer, and Costumes Designer in indie, non-for-profit and commercial theater spaces.  She is the Founding Editor of From The Neighborhood, an online cultural magazine highlighting the untold perspectives of the New York theater work force. Co-Curated with What Will the Neighbors Say?",
-          "https://www.federicaborlenghi.com/"
+          "Federica Borlenghi is a Brooklyn-based, multi-hyphenate artist from Milan, Italy. As a Costume Designer, she loves telling stories through colors and textures. Recent credits include *Zorba* (J2 Spotlight at AMT), *TRY* (Speyer Hall), *La Niña Y La Balena* (IATI), *Until Dark* (Et Aila at OOTB), *Double Bind* (sarAika Movement Collective) and *Stella, Come Home* (Et Aila at The Brick and HERE). Educational credits include *The Prom* (Talent Unlimited High School) and *The Prom*, *Anonymous*, *Laughing Stock*, *Orestea*, *Murder’s in the Heir* at NYFA. Federica is also a critically acclaimed, awarded Director, and actively works in the industry as a Line Producer too. More on federicaborlenghi.com"
         ]
       }
     ]
