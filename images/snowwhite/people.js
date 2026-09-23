@@ -72,7 +72,7 @@ window.SNOWWHITE_PEOPLE = [
     "people": [
       {
         "name": "Eric Kofman",
-        "role": "Writer (Book, Music & Lyrics) and Lead Producer",
+        "role": "Writer (Book, Music & Lyrics), Lead Producer and Projection Design",
         "image": "images/snowwhite/people/eric-kofman.webp",
         "focus": "",
         "bio": [
@@ -123,16 +123,6 @@ window.SNOWWHITE_PEOPLE = [
         "focus": "57% 22%",
         "bio": [
           "Ellie Berry is a recent Ithaca College graduate who is so excited to be the Stage Manager for *Snow White and the Seven Million Followers*! Recent credits include PSM of *Matilda* at Theatre Row, SM on *THE MALL THE MALL THE MALL*, Sub ASM on *Vape! The Grease Parody*, PSM on *The Very Hungry Caterpillar* show, and ASM on the Immersive *Into the Woods*. She wants to thank the amazing team for being so awesome to work with!"
-        ]
-      },
-      {
-        "name": "Seth Tyler Black",
-        "role": "Projection Design",
-        "image": "images/snowwhite/people/seth-tyler-black.webp",
-        "focus": "",
-        "bio": [
-          "Seth Tyler Black is an interdisciplinary artist and designer, experimenting with projections in theatres and exhibitions since 2011. Black can also be seen working in the art department in both film and theatrical productions, along with showcasing their own work.",
-          "https://www.sethtylerblackstudio.com/"
         ]
       },
       {
