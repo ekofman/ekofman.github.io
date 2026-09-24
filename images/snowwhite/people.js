@@ -99,9 +99,9 @@ window.SNOWWHITE_PEOPLE = [
         ]
       },
       {
-        "name": "Julianna Conte",
+        "name": "Juliana Conte",
         "role": "Choreographer",
-        "image": "images/snowwhite/people/julianna-conte.webp",
+        "image": "images/snowwhite/people/juliana-conte.webp",
         "focus": "",
         "bio": [
           "Juliana (she/they) is psyched to be a part of this team and collaborate with these incredible artists! They are a graduate of Cap21/Molloy College where they earned their BFA in Musical Theater. Juliana is a Vermont native currently living in NYC, with a passion for collaborative, new works of dance and theater. Her most recent choreography was featured in *Imposter* at The Flea Theater in collaboration with The Liminal Theater Collective. She gives endless thanks to her support system. She wouldn't be here without them! @julianaconte_. https://www.julianaconte.com/"
