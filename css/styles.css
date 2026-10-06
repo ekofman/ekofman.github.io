@@ -1141,6 +1141,12 @@ a.show__banner:hover img { transform: scale(1.03); }
   font-size: clamp(1.2rem, 3vw, 1.6rem);
   color: var(--bone);
 }
+.venue__runtime {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--bone);
+  opacity: 0.75;
+}
 
 .curtain--show {
   --accent: var(--poison);
