@@ -21,7 +21,8 @@ window.SNOWWHITE_PEOPLE = [
         "bio": [
           "Nicky Quirindongo (Beau) is thrilled to be making his Off-Broadway debut! A native New Yorker born and raised in Morningside Heights, Nicky holds a BFA in Dramatic Arts (Acting Concentration) and an MA in Arts Management and Entrepreneurship through a dual-degree program at The New School.",
           "Recent performance credits include appearing in a concert alongside Mandy Gonzalez and the New York Pops at Carnegie Hall for a tribute honoring Lin-Manuel Miranda (via R.Evolución Latina), directing and producing a Broadway cabaret (*Stories From Latine Artists*) at The Green Room 42, and taking on a role in a national commercial for a major insurance carrier.",
-          "Offstage, Nicky is an avid supporter of New York sports, passionately cheering on the Knicks, Mets, Rangers, and Giants. He is represented by Linda Colonna at MC Talent Consultants, LLC."
+          "Offstage, Nicky is an avid supporter of New York sports, passionately cheering on the Knicks, Mets, Rangers, and Giants. He is represented by Linda Colonna at MC Talent Consultants, LLC.",
+          "NickyQuirindongo.com | IG: @nickyquirindongo"
         ]
       },
       {
@@ -141,6 +142,15 @@ window.SNOWWHITE_PEOPLE = [
         "focus": "",
         "bio": [
           "Federica Borlenghi is a Brooklyn-based, multi-hyphenate artist from Milan, Italy. As a Costume Designer, she loves telling stories through colors and textures. Recent credits include *Zorba* (J2 Spotlight at AMT), *TRY* (Speyer Hall), *La Niña Y La Balena* (IATI), *Until Dark* (Et Aila at OOTB), *Double Bind* (sarAika Movement Collective) and *Stella, Come Home* (Et Aila at The Brick and HERE). Educational credits include *The Prom* (Talent Unlimited High School) and *The Prom*, *Anonymous*, *Laughing Stock*, *Orestea*, *Murder’s in the Heir* at NYFA. Federica is also a critically acclaimed, awarded Director, and actively works in the industry as a Line Producer too. More on federicaborlenghi.com"
+        ]
+      },
+      {
+        "name": "Rachel Kessler-Weinstein",
+        "role": "Costume Design",
+        "image": "images/snowwhite/people/rachel-kessler-weinstein.webp",
+        "focus": "",
+        "bio": [
+          "Rachel Kessler-Weinstein is a costume designer & theater artisan with love for the maximalist, historical, & camp. Projects include co-costume design with Maggie Tully for *Infinite Leg* (Write Club NYC), wardrobe for *Very Blue Light* (The Tank), wardrobe assistant for *Hold Me In the Water* & *Prince Faggot* (Playwrights Horizons), & costume design for *Haymarket: A New Folk Musical* & *The Importance of Being Earnest* (Oberlin College). She is happy to be a part of *Snow White and the Seven Million Followers*. Find her work at sites.google.com/view/rachelkesslerweinstein."
         ]
       }
     ]
