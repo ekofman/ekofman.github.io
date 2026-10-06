@@ -121,7 +121,7 @@ window.SNOWWHITE_PEOPLE = [
         "name": "Ellie Berry",
         "role": "Stage Manager",
         "image": "images/snowwhite/people/ellie-berry.webp",
-        "focus": "57% 22%",
+        "focus": "",
         "bio": [
           "Ellie Berry is a recent Ithaca College graduate who is so excited to be the Stage Manager for *Snow White and the Seven Million Followers*! Recent credits include PSM of *Matilda* at Theatre Row, SM on *THE MALL THE MALL THE MALL*, Sub ASM on *Vape! The Grease Parody*, PSM on *The Very Hungry Caterpillar* show, and ASM on the Immersive *Into the Woods*. She wants to thank the amazing team for being so awesome to work with!"
         ]
