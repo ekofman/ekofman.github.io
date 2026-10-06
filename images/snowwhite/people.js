@@ -146,7 +146,7 @@ window.SNOWWHITE_PEOPLE = [
       },
       {
         "name": "Rachel Kessler-Weinstein",
-        "role": "Costume Design",
+        "role": "Scenic Fabricator",
         "image": "images/snowwhite/people/rachel-kessler-weinstein.webp",
         "focus": "",
         "bio": [
