@@ -82,7 +82,7 @@ window.SNOWWHITE_PEOPLE = [
       },
       {
         "name": "Jordan Potash",
-        "role": "Co-composer and Musical Director",
+        "role": "Co-composer, Orchestrations and Musical Director",
         "image": "images/snowwhite/people/jordan-potash.webp",
         "focus": "",
         "bio": [
