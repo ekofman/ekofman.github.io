@@ -1198,6 +1198,57 @@ a.show__banner:hover img { transform: scale(1.03); }
 }
 .thanks__coda { margin-top: 1.5rem; color: var(--bone-dim); }
 
+/* ---------- musical numbers ----------
+   Dotted leaders, the way a paper program sets them; the leader collapses on
+   phones so the singers wrap under the title instead of being squeezed out. */
+.songs { max-width: 46rem; }
+.songs__list { list-style: none; counter-reset: song; }
+.songs__list li {
+  counter-increment: song;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.songs__list li::before {
+  content: counter(song);
+  flex: none;
+  width: 1.4rem;
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  color: var(--poison);
+  text-align: right;
+}
+.song__title {
+  font-family: var(--f-header);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -0.005em;
+  color: var(--bone);
+}
+.song__dots { flex: 1; min-width: 1.5rem; border-bottom: 1px dotted var(--line); transform: translateY(-0.25rem); }
+.song__who {
+  flex: none;
+  max-width: 22rem;
+  text-align: right;
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.songs__note { margin-top: 1.25rem; font-size: 0.88rem; color: var(--bone-dim); }
+
+@media (max-width: 640px) {
+  .songs__list li { flex-wrap: wrap; }
+  .song__dots { display: none; }
+  .song__who { width: 100%; max-width: none; text-align: left; margin-left: 1.9rem; }
+}
+
+.company { max-width: 54ch; }
+.company .show__text:first-child { margin-top: 0; color: var(--bone-dim); }
+
 /* ---------- front-of-house notices ----------
    The show page doubles as the program, so the house notices live on it. */
 .venue__notices {
