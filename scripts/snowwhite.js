@@ -67,26 +67,42 @@
     }
   }
 
-  // ---- production photos: a filmstrip of the run, click to open full size ----
-  const rail = document.getElementById("photoRail");
+  // ---- production photos: the run across a few filmstrips, click for full size ----
+  const strips = document.getElementById("photoStrips");
   const shots = Array.isArray(window.SNOWWHITE_PHOTOS) ? window.SNOWWHITE_PHOTOS : [];
-  if (rail && shots.length) {
-    const strip = rail.closest(".filmstrip");
-    const credit = (strip && strip.dataset.credit) || "";
+  if (strips && shots.length) {
+    const credit = strips.dataset.credit || "";
+    const rows = Math.max(1, parseInt(strips.dataset.rows, 10) || 1);
     const base = "images/snowwhite/show/";
     const label = (i) => i + 1 + " / " + shots.length + (credit ? " · Photo by " + credit : "");
+    const alt = (i) => "Production photo " + (i + 1) + " from Snow White & the Seven Million Followers";
 
-    // each tile carries its master's aspect ratio, so the rail's full width is
+    // each tile carries its master's aspect ratio, so a row's full width is
     // known before a single thumbnail has loaded and nothing shifts as they do
-    rail.innerHTML = shots
-      .map(
-        (p, i) =>
-          '<figure class="shot" data-i="' + i + '" tabindex="0" role="button" style="aspect-ratio:' +
-          p.w + "/" + p.h + '" aria-label="Open production photo ' + (i + 1) + ' of ' + shots.length +
-          '"><img src="' + base + "thumbs/" + p.id + '.webp" alt="Production photo ' + (i + 1) +
-          ' from Snow White &amp; the Seven Million Followers" loading="lazy" decoding="async"></figure>'
-      )
-      .join("");
+    const tile = (p, i) =>
+      '<figure class="shot" data-i="' + i + '" tabindex="0" role="button" style="aspect-ratio:' +
+      p.w + "/" + p.h + '" aria-label="Open production photo ' + (i + 1) + ' of ' + shots.length +
+      '"><img src="' + base + "thumbs/" + p.id + '.webp" alt="' + alt(i).replace(/&/g, "&amp;") +
+      '" loading="lazy" decoding="async"></figure>';
+
+    // the run split into equal rows, still in order. data-i stays the index into
+    // the whole set, so the lightbox arrows carry on across a row's edge.
+    const per = Math.ceil(shots.length / rows);
+    let html = "";
+    for (let r = 0; r < rows; r++) {
+      const from = r * per;
+      const slice = shots.slice(from, from + per);
+      if (!slice.length) break;
+      html +=
+        '<div class="filmstrip">' +
+          '<div class="filmstrip__rail">' + slice.map((p, k) => tile(p, from + k)).join("") + "</div>" +
+          '<button class="filmstrip__nav filmstrip__nav--prev" type="button" aria-label="Scroll row ' +
+            (r + 1) + ' left">&lsaquo;</button>' +
+          '<button class="filmstrip__nav filmstrip__nav--next" type="button" aria-label="Scroll row ' +
+            (r + 1) + ' right">&rsaquo;</button>' +
+        "</div>";
+    }
+    strips.innerHTML = html;
 
     const lb = document.createElement("div");
     lb.className = "lightbox";
@@ -104,7 +120,7 @@
     const show = (i) => {
       idx = (i + shots.length) % shots.length;
       lbImg.src = base + "web/" + shots[idx].id + ".webp";   // full size loads only when opened
-      lbImg.alt = "Production photo " + (idx + 1) + " from Snow White & the Seven Million Followers";
+      lbImg.alt = alt(idx);
       lbCap.textContent = label(idx);
       // warm the neighbours so arrowing through the run doesn't flash
       [idx + 1, idx - 1].forEach((n) => {
@@ -128,7 +144,7 @@
       else if (e.key === "ArrowRight") show(idx + 1);
     });
 
-    rail.querySelectorAll(".shot").forEach((fig) => {
+    strips.querySelectorAll(".shot").forEach((fig) => {
       const open = () => {
         show(parseInt(fig.dataset.i, 10));
         lb.classList.add("is-open");
@@ -140,19 +156,30 @@
       });
     });
 
-    // arrows for mice and keyboards; touch just scrolls the rail. Each press
-    // moves most of a screenful, and the one at the end you've reached hides.
-    const prev = document.getElementById("photoPrev");
-    const next = document.getElementById("photoNext");
-    if (prev && next) {
-      const page = (dir) => rail.scrollBy({ left: dir * rail.clientWidth * 0.9, behavior: "smooth" });
-      prev.addEventListener("click", () => page(-1));
-      next.addEventListener("click", () => page(1));
+    // every row scrolls on its own: arrows for mice and keyboards, touch just
+    // swipes the rail. Each press moves most of a screenful, and the arrow at
+    // whichever end that row has reached hides.
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    strips.querySelectorAll(".filmstrip").forEach((row) => {
+      const rail = row.querySelector(".filmstrip__rail");
+      const prev = row.querySelector(".filmstrip__nav--prev");
+      const next = row.querySelector(".filmstrip__nav--next");
       const ends = () => {
         const max = rail.scrollWidth - rail.clientWidth;
         prev.hidden = rail.scrollLeft <= 4;
         next.hidden = rail.scrollLeft >= max - 4;
       };
+      // behavior is passed here rather than set in CSS: a rail-level
+      // scroll-behavior would sit after the reduced-motion block in the
+      // stylesheet and win over it, so a reader who asked for less motion
+      // would get the animation anyway.
+      const page = (dir) =>
+        rail.scrollBy({
+          left: dir * rail.clientWidth * 0.9,
+          behavior: reduceMotion ? "auto" : "smooth"
+        });
+      prev.addEventListener("click", () => page(-1));
+      next.addEventListener("click", () => page(1));
       let pending = false;
       rail.addEventListener("scroll", () => {
         if (pending) return;
@@ -161,7 +188,7 @@
       }, { passive: true });
       window.addEventListener("resize", ends);
       ends();
-    }
+    });
   }
 
   const groups = Array.isArray(window.SNOWWHITE_PEOPLE) ? window.SNOWWHITE_PEOPLE : [];
