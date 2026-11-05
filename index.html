@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Cinzel:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=14b73404" />
+  <link rel="stylesheet" href="css/styles.css?v=734a2304" />
 </head>
 <body>
 
@@ -103,11 +103,25 @@
 
       <!-- Feature: Snow White -->
       <article class="show show--feature reveal" data-theme="snow">
-        <a class="show__banner" href="snow-white.html">
-          <img src="images/snowwhite-banner.webp" alt="Snow White and the Seven Million Followers — a new musical" />
-        </a>
+        <div class="show__marquee">
+          <a class="show__banner" href="snow-white.html">
+            <img src="images/snowwhite-banner.webp" alt="Snow White and the Seven Million Followers — a new musical" />
+          </a>
+          <!-- production stills cycling beside the banner; the fade is pure CSS
+               (see .showreel in styles.css). Photos by Grace Copeland; the full
+               set is the filmstrip at the top of snow-white.html. -->
+          <a class="showreel" href="snow-white.html#photos" aria-label="See the production photos">
+            <img src="images/snowwhite/show/web/0184.webp" alt="The company of Snow White &amp; the Seven Million Followers mid-number" style="--i:0" decoding="async" />
+            <img src="images/snowwhite/show/web/0897.webp" alt="Snow at the microphone, arms flung wide" loading="lazy" style="--i:1" decoding="async" />
+            <img src="images/snowwhite/show/web/0169.webp" alt="Three influencers posing under saturated light" loading="lazy" style="--i:2" decoding="async" />
+            <img src="images/snowwhite/show/web/0768.webp" alt="Snow filming herself on a phone while another influencer looks on" loading="lazy" style="--i:3" decoding="async" />
+            <img src="images/snowwhite/show/web/1195.webp" alt="The ensemble with arms raised around Walter" loading="lazy" style="--i:4" decoding="async" />
+            <img src="images/snowwhite/show/web/0518.webp" alt="Beau in a headband, arms open, alone in a spotlight" loading="lazy" style="--i:5" decoding="async" />
+            <span class="showreel__cue">Production photos &rarr;</span>
+          </a>
+        </div>
         <div class="show__body">
-          <p class="show__kicker">Now booking</p>
+          <p class="show__kicker">World premiere, October 2026</p>
           <h3 class="show__title"><a href="snow-white.html">Snow White &amp; the Seven Million Followers</a></h3>
           <p class="show__text">
             In a not-so-distant future, AI has decimated the creator economy and left the
@@ -120,9 +134,9 @@
             and the unsettling possibility that the most dangerous lies are the ones we most
             desperately want to believe.
           </p>
-          <span class="show__meta">AMT Theater &middot; October 15&ndash;18</span>
+          <span class="show__meta">AMT Theater &middot; October 15&ndash;18, 2026</span>
           <div class="show__actions">
-            <a class="btn btn--solid" href="https://miragefactory.ludus.com/index.php?sections=events" target="_blank" rel="noopener">Get tickets</a>
+            <a class="btn btn--solid" href="snow-white.html#photos">See the production photos</a>
             <a class="btn btn--ghost" href="snow-white.html">Meet the cast &amp; creative team</a>
             <a class="btn btn--ghost btn--ig" href="https://instagram.com/seven.million.musical" target="_blank" rel="noopener">
               <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>

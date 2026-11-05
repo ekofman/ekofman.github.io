@@ -414,6 +414,55 @@ a { color: inherit; text-decoration: none; }
 }
 a.show__banner:hover img { transform: scale(1.03); }
 
+/* Banner + a frame of production stills beside it. The banner sets the row's
+   height; the reel is whatever width is left, cropping its photos to fit. */
+.show__marquee {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.show__marquee .show__banner { border-bottom: 0; }
+.showreel {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--ink-2);
+}
+/* Each still fades up in its own slot and back down as the next one arrives, on
+   one shared loop — six frames x 3.2s. No JS: the only thing that differs per
+   image is --i, the slot it waits for. */
+.showreel img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: showreel 19.2s var(--ease) infinite;
+  animation-delay: calc(var(--i) * 3.2s);
+}
+@keyframes showreel {
+  0%     { opacity: 0; }
+  3%     { opacity: 1; }
+  16.7%  { opacity: 1; }
+  19.7%  { opacity: 0; }
+  100%   { opacity: 0; }
+}
+.showreel__cue {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 2.5rem 0.9rem 0.7rem;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bone);
+  background: linear-gradient(transparent, rgba(8,6,4,0.85));
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+.showreel:hover .showreel__cue, .showreel:focus-visible .showreel__cue { opacity: 1; }
+@media (hover: none) { .showreel__cue { opacity: 1; } }   /* no hover to reveal it */
+
 /* Haber */
 .show--haber { --accent: var(--oxblood); }
 .show--haber .show__logo { display: block; max-width: 420px; margin: 0.5rem 0 1.25rem; overflow: hidden; border-radius: 3px; }
@@ -727,6 +776,9 @@ a.show__banner:hover img { transform: scale(1.03); }
   .marquee.is-open .marquee__toggle span:nth-child(2) { opacity: 0; }
   .marquee.is-open .marquee__toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+  .show__marquee { grid-template-columns: 1fr; }
+  .showreel { aspect-ratio: 16 / 9; }
+
   .show--haber { display: block; }
   .show__gallery { grid-template-columns: 1fr 1fr; }
   .lab__grid { grid-template-columns: 1fr; }
@@ -742,13 +794,14 @@ a.show__banner:hover img { transform: scale(1.03); }
    REDUCED MOTION
    ===================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html, .filmstrip__rail { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .showreel img:first-of-type { opacity: 1; }   /* the cycle is off; show one frame */
 }
 
 /* =====================================================================
@@ -851,6 +904,16 @@ a.show__banner:hover img { transform: scale(1.03); }
 @media (min-width: 861px) { .act--show .act__grid { grid-template-columns: minmax(8rem, 1fr) 6fr; } }
 .page-show { --maxw: 1600px; }   /* wider content area so the people rows have room */
 .act--show .act__title { font-size: clamp(0.95rem, 2.75vw, 1.7rem); }
+/* a dateline under a section label, in the same small mono as the other labels */
+.act__intro--show {
+  margin-top: 0.6rem;
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--poison);
+}
 /* show page: shorter sections (no full-screen padding) and a taller nav bar
    carrying the show banner as its logo */
 .act--show { padding-block: clamp(3rem, 7vw, 5rem); }
@@ -913,6 +976,77 @@ a.show__banner:hover img { transform: scale(1.03); }
   color: var(--bone-dim);
 }
 .showhero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 2rem; }
+
+/* ---------- production photos: a filmstrip under the banner ----------
+   A fixed-height rail of tiles that each keep their own aspect ratio, so the
+   portrait and landscape frames sit side by side the way a contact sheet reads.
+   Tiles come from scripts/snowwhite.js; the lightbox reuses .lightbox above. */
+.filmstrip { position: relative; }
+.filmstrip__rail {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  padding-bottom: 0.7rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.filmstrip__rail::-webkit-scrollbar { height: 6px; }
+.filmstrip__rail::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+.shot {
+  flex: 0 0 auto;
+  height: clamp(150px, 19vw, 250px);
+  margin: 0;
+  scroll-snap-align: center;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--ink-2);
+  cursor: zoom-in;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.shot img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.shot:hover, .shot:focus-visible { border-color: var(--poison); transform: translateY(-3px); }
+.shot:hover img { transform: scale(1.04); }
+/* the arrows sit over the rail's edges and only appear to a mouse */
+.filmstrip__nav {
+  position: absolute; top: calc(50% - 0.35rem);
+  z-index: 2;
+  transform: translateY(-50%);
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(21,17,14,0.85);
+  border: 1px solid var(--line);
+  color: var(--bone);
+  font-size: 1.5rem; line-height: 1; cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s var(--ease), background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.filmstrip:hover .filmstrip__nav, .filmstrip__nav:focus-visible { opacity: 1; }
+.filmstrip__nav:hover { background: var(--poison); border-color: var(--poison); color: var(--ink); }
+.filmstrip__nav[hidden] { display: none; }
+.filmstrip__nav--prev { left: -0.6rem; }
+.filmstrip__nav--next { right: -0.6rem; }
+@media (hover: none) { .filmstrip__nav { display: none; } }   /* touch just scrolls the rail */
+.filmstrip__note {
+  margin-top: 0.9rem;
+  max-width: 48ch;
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.filmstrip__note a { color: var(--bone-dim); border-bottom: 1px solid var(--poison); transition: color 0.25s var(--ease); }
+.filmstrip__note a:hover { color: var(--poison); }
 
 /* ---------- synopsis ---------- */
 .synopsis { max-width: 64ch; }
@@ -1118,7 +1252,7 @@ a.show__banner:hover img { transform: scale(1.03); }
 .person__bio a:hover { color: var(--poison); }
 
 /* ---------- tickets / venue ---------- */
-#tickets .act__grid { min-height: 0; }   /* short section: don't pad it to a full screen */
+#premiere .act__grid { min-height: 0; }   /* short section: don't pad it to a full screen */
 .venue {
   border: 1px solid var(--line);
   border-radius: 4px;

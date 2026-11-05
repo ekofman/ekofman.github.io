@@ -98,12 +98,34 @@ bash build-snowwhite.sh
 
 That parses the doc into `images/snowwhite/people.js`, converts each headshot to
 `images/snowwhite/people/<slug>.webp`, converts the six RealiTea logo variants to
-`images/snowwhite/logo/<n>.webp` (the scroll-linked logo), and
-deletes photos for people removed from the doc. `scripts/snowwhite.js` renders
+`images/snowwhite/logo/<n>.webp` (the scroll-linked logo), builds the production
+photos (below), and deletes photos for people removed from the doc. `scripts/snowwhite.js` renders
 the cards. Don't hand-edit `people.js` or add people in the HTML — edit the doc
 and rerun. The ticket link is the Ludus public events page
 (`miragefactory.ludus.com/index.php?sections=events`); `/admin/…` Ludus URLs are
 the logged-in dashboard and won't work for visitors.
+
+The same script builds the **production-photo filmstrip** at the top of the show
+page from another folder outside the repo:
+
+```
+/Users/erickofman/Documents/SnowWhiteMusical/Assets/PhotosAndVideos/Show/SevenMillionShowPhotos_October 18_ 2026
+```
+
+Each master becomes `images/snowwhite/show/thumbs/<id>.webp` (600px, the strip)
+and `images/snowwhite/show/web/<id>.webp` (1600px, the lightbox), where `<id>` is
+the photographer's frame number from the filename (`…_0129.jpg` -> `0129`), plus a
+line in `images/snowwhite/show.js` carrying the master's pixel size. The strip
+reserves each tile's width from that size, so 229 lazy-loading thumbnails don't
+shift the page as they arrive. 229 photos is about 70 seconds of `cwebp` on a
+cold run; after that it only rebuilds what changed. To drop or add photos, change
+the folder and rerun — stale derivatives are deleted for you. The photographer's
+credit and her link are hand-written in `snow-white.html` (`.filmstrip__note`),
+not derived from the filenames.
+
+The same derivatives feed the cycling frame beside the banner on `index.html`
+(`.showreel`). Those six photos are picked by hand and listed in the HTML; the
+crossfade is pure CSS, one shared loop with a per-image `--i` delay.
 
 Non-artwork images (banners, headshot, logo) are **not** covered by the script.
 Convert by hand and update the `src` in `index.html`:

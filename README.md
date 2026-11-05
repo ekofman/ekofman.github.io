@@ -44,6 +44,12 @@ serving a stale cached copy. If the hook is missing (fresh clone), run
   headshot filenames and bios — the format is explained at the top of the file),
   then run `bash build-snowwhite.sh` from the site folder. It converts the
   headshots and regenerates the cards on `snow-white.html`. Commit and push to publish.
+- **Snow White production photos:** drop photos in (or remove them from)
+  `~/Documents/SnowWhiteMusical/Assets/PhotosAndVideos/Show/SevenMillionShowPhotos_October 18_ 2026`
+  and run the same `bash build-snowwhite.sh`. It rebuilds the filmstrip at the top
+  of `snow-white.html` and its lightbox. The six photos cycling beside the banner
+  on the home page are chosen by hand in `index.html` — swap a filename there to
+  change one.
 - **Add a comic PDF:** a PDF can't render inside an image frame. Put it in `files/`
   and uncomment the `frame frame--pdf` download tile in the gallery grid, pointing
   `href` at your file.

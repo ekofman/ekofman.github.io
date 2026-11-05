@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Cinzel:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=14b73404" />
+  <link rel="stylesheet" href="css/styles.css?v=734a2304" />
 </head>
 <body class="page-show">
 
@@ -26,13 +26,15 @@
     </a>
 
     <nav class="marquee__nav" aria-label="Sections">
+      <a href="#photos" data-nav="photos">Photos</a>
       <a href="#synopsis" data-nav="synopsis">Synopsis</a>
       <a href="#songs" data-nav="songs">Songs</a>
       <a href="#cast" data-nav="cast">Cast</a>
       <a href="#team" data-nav="team">Creative team</a>
       <a href="#thanks" data-nav="thanks">Thanks</a>
+      <a href="#premiere" data-nav="premiere">World premiere</a>
       <a href="https://seven-million-musical.printful.me/" target="_blank" rel="noopener" class="marquee__contact">Merch</a>
-      <a href="https://miragefactory.ludus.com/index.php?sections=events" target="_blank" rel="noopener" class="marquee__contact marquee__contact--solid">Get tickets</a>
+      <a href="https://miragefactory.ludus.com/donate" target="_blank" rel="noopener" class="marquee__contact marquee__contact--solid">Support the show</a>
     </nav>
 
     <button class="marquee__toggle" id="navToggle" aria-expanded="false" aria-controls="marquee" aria-label="Open menu">
@@ -53,7 +55,7 @@
           <span>October 15&ndash;18, 2026</span>
         </p>
 
-        <a class="showhero__banner" href="https://miragefactory.ludus.com/index.php?sections=events" target="_blank" rel="noopener">
+        <a class="showhero__banner" href="#photos">
           <img src="images/snowwhite-banner.webp" alt="Who influences the influencers? Snow White and the Seven Million Followers — a new musical" fetchpriority="high" />
         </a>
 
@@ -63,6 +65,34 @@
           desperately want to believe.
         </p>
       </div>
+    </section>
+
+    <!-- ===================== PRODUCTION PHOTOS ===================== -->
+    <section class="act act--show" id="photos" data-accent="poison">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <h2 class="act__title">Production photos</h2>
+          </div>
+        </aside>
+
+        <div class="act__content">
+          <!-- Tiles are rendered by scripts/snowwhite.js from images/snowwhite/show.js,
+               which build-snowwhite.sh generates from the show's photo folder. -->
+          <div class="filmstrip reveal" data-credit="Grace Copeland">
+            <div class="filmstrip__rail" id="photoRail"></div>
+            <button class="filmstrip__nav filmstrip__nav--prev" id="photoPrev" type="button" aria-label="Scroll photos left">&lsaquo;</button>
+            <button class="filmstrip__nav filmstrip__nav--next" id="photoNext" type="button" aria-label="Scroll photos right">&rsaquo;</button>
+          </div>
+          <p class="filmstrip__note">
+            Photographed by <a href="https://www.gcope.nyc/" target="_blank" rel="noopener">Grace Copeland</a>
+            at AMT Theater, October 18, 2026.
+            Click any frame to open it full size.
+          </p>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
     </section>
 
     <!-- ===================== SYNOPSIS ===================== -->
@@ -219,6 +249,7 @@
               <li>Ethan Wilcox</li>
               <li>Sarah Dembling</li>
               <li>Tracy Richards</li>
+              <li>Annie Sherman</li>
               <li>Pete Dorton <span>Front of house</span></li>
               <li>Tamara Flannagan <span>AMT Theater</span></li>
               <li>Tony Sportiello <span>AMT Theater</span></li>
@@ -254,20 +285,21 @@
       </div><!-- /.act__grid -->
     </section>
 
-    <!-- ===================== TICKETS ===================== -->
-    <section class="act act--show" id="tickets" data-accent="poison">
+    <!-- ===================== WORLD PREMIERE ===================== -->
+    <section class="act act--show" id="premiere" data-accent="poison">
       <div class="act__spot" aria-hidden="true"></div>
 
       <div class="act__grid">
         <aside class="act__aside">
           <div class="act__heading">
-            <h2 class="act__title">Tickets</h2>
+            <h2 class="act__title">World premiere</h2>
+            <p class="act__intro act__intro--show">AMT Theater &middot; October 15&ndash;18, 2026</p>
           </div>
         </aside>
 
         <div class="act__content">
           <article class="venue reveal">
-            <p class="show__kicker">Now booking</p>
+            <p class="show__kicker">Where it premiered</p>
             <h3 class="venue__title">AMT Theater</h3>
             <p class="venue__address">
               <a href="https://maps.google.com/?q=AMT+Theater,+354+W+45th+St,+New+York,+NY+10036" target="_blank" rel="noopener">354 W 45th St, New York, NY 10036</a>
@@ -275,7 +307,7 @@
             <p class="venue__dates">October 15&ndash;18, 2026</p>
             <p class="venue__runtime">100 minutes, no intermission</p>
             <div class="show__actions">
-              <a class="btn btn--solid" href="https://miragefactory.ludus.com/index.php?sections=events" target="_blank" rel="noopener">Get tickets</a>
+              <a class="btn btn--solid" href="#photos">See the production photos</a>
               <a class="btn btn--ghost" href="https://miragefactory.ludus.com/donate" target="_blank" rel="noopener">Support the show</a>
               <a class="btn btn--ghost btn--ig" href="https://instagram.com/seven.million.musical" target="_blank" rel="noopener">
                 <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
@@ -317,8 +349,9 @@
     </footer>
   </main>
 
+  <script src="images/snowwhite/show.js?v=05ebbc48"></script>
   <script src="images/snowwhite/people.js?v=c3f70cc0"></script>
   <script src="scripts/main.js?v=b770cc69"></script>
-  <script src="scripts/snowwhite.js?v=c27daa68"></script>
+  <script src="scripts/snowwhite.js?v=44936e5b"></script>
 </body>
 </html>
