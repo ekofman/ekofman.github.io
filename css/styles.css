@@ -1030,7 +1030,8 @@ a.show__banner:hover img { transform: scale(1.03); }
 }
 .shot:hover, .shot:focus-visible { border-color: var(--poison); transform: translateY(-3px); }
 .shot:hover img { transform: scale(1.04); }
-/* the arrows sit over the rail's edges and only appear to a mouse */
+/* the arrows sit over the rail's edges, always on, so there is no need to
+   discover that the row scrolls. Each one hides only at the end it has reached. */
 .filmstrip__nav {
   position: absolute; top: calc(50% - 0.35rem);
   z-index: 2;
@@ -1041,16 +1042,13 @@ a.show__banner:hover img { transform: scale(1.03); }
   border: 1px solid var(--line);
   color: var(--bone);
   font-size: 1.5rem; line-height: 1; cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.25s var(--ease), background 0.2s var(--ease), border-color 0.2s var(--ease);
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease);
 }
-.filmstrip:hover .filmstrip__nav, .filmstrip__nav:focus-visible { opacity: 1; }
 .filmstrips .filmstrip__nav { width: 36px; height: 36px; font-size: 1.25rem; }
 .filmstrip__nav:hover { background: var(--poison); border-color: var(--poison); color: var(--ink); }
 .filmstrip__nav[hidden] { display: none; }
 .filmstrip__nav--prev { left: -0.6rem; }
 .filmstrip__nav--next { right: -0.6rem; }
-@media (hover: none) { .filmstrip__nav { display: none; } }   /* touch just scrolls the rail */
 .filmstrip__note {
   margin-top: 0.9rem;
   max-width: 48ch;

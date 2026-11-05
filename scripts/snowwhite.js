@@ -156,9 +156,8 @@
       });
     });
 
-    // every row scrolls on its own: arrows for mice and keyboards, touch just
-    // swipes the rail. Each press moves most of a screenful, and the arrow at
-    // whichever end that row has reached hides.
+    // every row scrolls on its own, by arrow or by swipe. Each press moves most
+    // of a screenful, and the arrow at whichever end that row has reached hides.
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     strips.querySelectorAll(".filmstrip").forEach((row) => {
       const rail = row.querySelector(".filmstrip__rail");
