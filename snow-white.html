@@ -26,9 +26,9 @@
     </a>
 
     <nav class="marquee__nav" aria-label="Sections">
+      <a href="#synopsis" data-nav="synopsis">Synopsis</a>
       <a href="#photos" data-nav="photos">Photos</a>
       <a href="#praise" data-nav="praise">Praise</a>
-      <a href="#synopsis" data-nav="synopsis">Synopsis</a>
       <a href="#cast" data-nav="cast">Cast</a>
       <a href="#team" data-nav="team">Creative team</a>
       <a href="#thanks" data-nav="thanks">Thanks</a>
@@ -68,6 +68,57 @@
         </p>
       </div>
     </section>
+
+    <!-- ===================== SYNOPSIS ===================== -->
+    <section class="act act--show" id="synopsis" data-accent="poison">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <h2 class="act__title">Synopsis</h2>
+          </div>
+        </aside>
+
+        <div class="act__content">
+          <div class="synopsis reveal">
+            <div class="synopsis__text">
+              <p class="show__text">
+                In a not-so-distant future, AI has decimated the creator economy and left the
+                world&rsquo;s influencers fighting for their survival. A mysterious new social media
+                platform offers them one last chance to maintain their fame, relevance, and
+                livelihoods. But is the deal too good to be true?
+              </p>
+            </div>
+          </div>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- RealiTea logo: fixed to the left column once the synopsis - the first
+         section under the banner - is reached, cycling through creepier variants
+         as the reader scrolls on (scripts/snowwhite.js) -->
+    <div class="realitea" id="realitea">
+      <p class="realitea__label"><span class="realitea__ad">Ad</span> <span class="realitea__sponsor">Sponsored by</span></p>
+      <button class="realitea__close" id="realiteaClose" type="button" aria-label="Close ad">&times;</button>
+      <div class="realitea__frames">
+        <img src="images/snowwhite/logo/1.webp" alt="" class="is-on" decoding="async" />
+        <img src="images/snowwhite/logo/2.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/3.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/4.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/5.webp" alt="" decoding="async" />
+        <img src="images/snowwhite/logo/6.webp" alt="" decoding="async" />
+        <p class="realitea__pitch">RealiTea is now hiring influencers. Come see the show to learn more.</p>
+      </div>
+    </div>
+
+    <!-- the "close ad" gag -->
+    <div class="nope" id="nope" hidden>
+      <div class="nope__box" role="dialog" aria-modal="true" aria-labelledby="nopeTitle">
+        <p class="nope__title" id="nopeTitle">Are you sure?</p>
+        <button class="btn btn--solid nope__btn" id="nopeNo" type="button">No</button>
+      </div>
+    </div>
 
     <!-- ===================== PRODUCTION PHOTOS ===================== -->
     <section class="act act--show" id="photos" data-accent="poison">
@@ -125,56 +176,6 @@
         </div><!-- /.act__content -->
       </div><!-- /.act__grid -->
     </section>
-
-    <!-- ===================== SYNOPSIS ===================== -->
-    <section class="act act--show" id="synopsis" data-accent="poison">
-      <div class="act__spot" aria-hidden="true"></div>
-
-      <div class="act__grid">
-        <aside class="act__aside">
-          <div class="act__heading">
-            <h2 class="act__title">Synopsis</h2>
-          </div>
-        </aside>
-
-        <div class="act__content">
-          <div class="synopsis reveal">
-            <div class="synopsis__text">
-              <p class="show__text">
-                In a not-so-distant future, AI has decimated the creator economy and left the
-                world&rsquo;s influencers fighting for their survival. A mysterious new social media
-                platform offers them one last chance to maintain their fame, relevance, and
-                livelihoods. But is the deal too good to be true?
-              </p>
-            </div>
-          </div>
-        </div><!-- /.act__content -->
-      </div><!-- /.act__grid -->
-    </section>
-
-    <!-- RealiTea logo: fixed to the left column once the synopsis is reached,
-         cycling through creepier variants as the reader scrolls (scripts/snowwhite.js) -->
-    <div class="realitea" id="realitea">
-      <p class="realitea__label"><span class="realitea__ad">Ad</span> <span class="realitea__sponsor">Sponsored by</span></p>
-      <button class="realitea__close" id="realiteaClose" type="button" aria-label="Close ad">&times;</button>
-      <div class="realitea__frames">
-        <img src="images/snowwhite/logo/1.webp" alt="" class="is-on" decoding="async" />
-        <img src="images/snowwhite/logo/2.webp" alt="" decoding="async" />
-        <img src="images/snowwhite/logo/3.webp" alt="" decoding="async" />
-        <img src="images/snowwhite/logo/4.webp" alt="" decoding="async" />
-        <img src="images/snowwhite/logo/5.webp" alt="" decoding="async" />
-        <img src="images/snowwhite/logo/6.webp" alt="" decoding="async" />
-        <p class="realitea__pitch">RealiTea is now hiring influencers. Come see the show to learn more.</p>
-      </div>
-    </div>
-
-    <!-- the "close ad" gag -->
-    <div class="nope" id="nope" hidden>
-      <div class="nope__box" role="dialog" aria-modal="true" aria-labelledby="nopeTitle">
-        <p class="nope__title" id="nopeTitle">Are you sure?</p>
-        <button class="btn btn--solid nope__btn" id="nopeNo" type="button">No</button>
-      </div>
-    </div>
 
     <!-- ===================== CAST ===================== -->
     <section class="act act--show" id="cast" data-accent="poison">
