@@ -487,6 +487,18 @@ a.show__banner:hover img { transform: scale(1.03); }
   font-size: clamp(1.05rem, 2.4vw, 1.3rem);
   color: var(--bone);
 }
+/* pulled into a show card, the quote takes that act's own accent */
+.quote--show { border-left-color: var(--accent); }
+.quote cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: var(--f-mono);
+  font-style: normal;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 
 /* ---------- Buttons ---------- */
 .show__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
