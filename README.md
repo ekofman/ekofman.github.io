@@ -50,6 +50,14 @@ serving a stale cached copy. If the hook is missing (fresh clone), run
   of `snow-white.html` and its lightbox. The six photos cycling beside the banner
   on the home page are chosen by hand in `index.html` — swap a filename there to
   change one.
+- **Snow White videos:** the Videos section lists YouTube clips, written by hand
+  in the `<div class="videos">` block of `snow-white.html`. To add one, copy a
+  `<div class="video">` tile, put the video's YouTube id (the part after
+  `youtu.be/`, before any `?`) in both `data-yt` and the thumbnail `src`, and set
+  the title in `data-title`, `aria-label` and `.video__title`. The poster image
+  comes straight from YouTube, so setting a custom thumbnail in YouTube Studio
+  changes it here too. Videos must be **Unlisted** or **Public** — a Private
+  video won't play for anyone but you.
 - **Add a comic PDF:** a PDF can't render inside an image frame. Put it in `files/`
   and uncomment the `frame frame--pdf` download tile in the gallery grid, pointing
   `href` at your file.

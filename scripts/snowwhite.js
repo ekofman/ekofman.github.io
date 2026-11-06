@@ -190,6 +190,44 @@
     });
   }
 
+  // ---- videos: a press swaps the poster frame for the YouTube player ----
+  // The tiles are hand-picked and written into snow-white.html, like the
+  // showreel on the home page. Nothing is fetched from YouTube until someone
+  // asks for it, which is the whole point of not embedding five live players.
+  document.querySelectorAll(".video[data-yt]").forEach((box) => {
+    const btn = box.querySelector(".video__btn");
+    const id = box.dataset.yt;
+    if (!btn || !id) return;
+
+    // maxresdefault only exists for sources that were at least 1280 wide, and
+    // YouTube answers 404 rather than serving a smaller one. Step down through
+    // the sizes it always has instead of leaving an empty tile.
+    const thumb = box.querySelector(".video__thumb");
+    if (thumb) {
+      const fallbacks = ["sddefault", "hqdefault"];
+      thumb.addEventListener("error", () => {
+        const next = fallbacks.shift();
+        if (next) thumb.src = "https://i.ytimg.com/vi/" + encodeURIComponent(id) + "/" + next + ".jpg";
+      });
+    }
+
+    btn.addEventListener("click", () => {
+      const frame = document.createElement("iframe");
+      // -nocookie defers YouTube's tracking cookies; autoplay because the click
+      // that got here was already the reader asking for the video
+      frame.src =
+        "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) +
+        "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      frame.title = box.dataset.title || "Video";
+      frame.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.allowFullscreen = true;
+      box.replaceChildren(frame);
+      box.classList.add("is-playing");
+      frame.focus();   // keyboard control carries on inside the player
+    });
+  });
+
   const groups = Array.isArray(window.SNOWWHITE_PEOPLE) ? window.SNOWWHITE_PEOPLE : [];
   const grids = document.querySelectorAll(".people[data-group]");
   if (!groups.length || !grids.length) return;

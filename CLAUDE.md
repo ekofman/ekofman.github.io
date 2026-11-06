@@ -123,6 +123,16 @@ the folder and rerun — stale derivatives are deleted for you. The photographer
 credit and her link are hand-written in `snow-white.html` (`.filmstrip__note`),
 not derived from the filenames.
 
+The **Videos** section is not generated — the five YouTube clips are hand-picked
+and written into `snow-white.html` the way the home page's `.showreel` photos are.
+Each `.video` carries `data-yt` (the id) and `data-title`; `scripts/snowwhite.js`
+leaves it as a poster image until it is clicked, then replaces the tile with a
+`youtube-nocookie` iframe. Five live embeds would be megabytes of player JS on a
+page that already lazy-loads 229 thumbnails, so don't "simplify" the facade into
+plain iframes. Posters come from `i.ytimg.com/vi/<id>/maxresdefault.jpg`, with a
+JS fallback to `sddefault` then `hqdefault` — YouTube 404s maxres for sources
+under 1280px wide rather than substituting a smaller one.
+
 The same derivatives feed the cycling frame beside the banner on `index.html`
 (`.showreel`). Those six photos are picked by hand and listed in the HTML; the
 crossfade is pure CSS, one shared loop with a per-image `--i` delay.

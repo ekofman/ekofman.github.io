@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Cinzel:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=46227eb7" />
+  <link rel="stylesheet" href="css/styles.css?v=267450b9" />
 </head>
 <body class="page-show">
 
@@ -28,6 +28,7 @@
     <nav class="marquee__nav" aria-label="Sections">
       <a href="#synopsis" data-nav="synopsis">Synopsis</a>
       <a href="#photos" data-nav="photos">Photos</a>
+      <a href="#videos" data-nav="videos">Videos</a>
       <a href="#praise" data-nav="praise">Praise</a>
       <a href="#cast" data-nav="cast">Cast</a>
       <a href="#team" data-nav="team">Creative team</a>
@@ -139,6 +140,72 @@
             Photographed by <a href="https://www.gcope.nyc/" target="_blank" rel="noopener">Grace Copeland</a>
             at AMT Theater, October 18, 2026.
             Click any frame to open it full size.
+          </p>
+        </div><!-- /.act__content -->
+      </div><!-- /.act__grid -->
+    </section>
+
+    <!-- ===================== VIDEOS ===================== -->
+    <section class="act act--show" id="videos" data-accent="poison">
+      <div class="act__spot" aria-hidden="true"></div>
+
+      <div class="act__grid">
+        <aside class="act__aside">
+          <div class="act__heading">
+            <h2 class="act__title">Songs from the show</h2>
+          </div>
+        </aside>
+
+        <div class="act__content">
+          <!-- Click-to-play facades, not live embeds: each tile is only the
+               YouTube poster frame until it is pressed, so five videos cost five
+               images instead of five players, and nothing is requested from
+               YouTube until a reader asks for it. scripts/snowwhite.js does the
+               swap and falls back through the smaller poster sizes. -->
+          <div class="videos reveal">
+          <div class="video" data-yt="zmF0TsmgrM4" data-title="World of Illusions">
+            <button class="video__btn" type="button" aria-label="Play World of Illusions">
+              <img class="video__thumb" src="https://i.ytimg.com/vi/zmF0TsmgrM4/maxresdefault.jpg"
+                   alt="" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="video__play" aria-hidden="true"></span>
+              <span class="video__title">World of Illusions</span>
+            </button>
+          </div>
+          <div class="video" data-yt="oP6llubY4VQ" data-title="Biggest Break">
+            <button class="video__btn" type="button" aria-label="Play Biggest Break">
+              <img class="video__thumb" src="https://i.ytimg.com/vi/oP6llubY4VQ/maxresdefault.jpg"
+                   alt="" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="video__play" aria-hidden="true"></span>
+              <span class="video__title">Biggest Break</span>
+            </button>
+          </div>
+          <div class="video" data-yt="NcYyoYUGgAQ" data-title="Watch Your Back">
+            <button class="video__btn" type="button" aria-label="Play Watch Your Back">
+              <img class="video__thumb" src="https://i.ytimg.com/vi/NcYyoYUGgAQ/maxresdefault.jpg"
+                   alt="" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="video__play" aria-hidden="true"></span>
+              <span class="video__title">Watch Your Back</span>
+            </button>
+          </div>
+          <div class="video" data-yt="Rxw8oI9qezM" data-title="They Don’t Need to Know">
+            <button class="video__btn" type="button" aria-label="Play They Don’t Need to Know">
+              <img class="video__thumb" src="https://i.ytimg.com/vi/Rxw8oI9qezM/maxresdefault.jpg"
+                   alt="" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="video__play" aria-hidden="true"></span>
+              <span class="video__title">They Don&rsquo;t Need to Know</span>
+            </button>
+          </div>
+          <div class="video" data-yt="KH6DkfuKkCE" data-title="RealiTea Jingle">
+            <button class="video__btn" type="button" aria-label="Play RealiTea Jingle">
+              <img class="video__thumb" src="https://i.ytimg.com/vi/KH6DkfuKkCE/maxresdefault.jpg"
+                   alt="" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="video__play" aria-hidden="true"></span>
+              <span class="video__title">RealiTea Jingle</span>
+            </button>
+          </div>
+          </div>
+          <p class="filmstrip__note">
+            Filmed at AMT Theater, October 2026. Press play to load the video from YouTube.
           </p>
         </div><!-- /.act__content -->
       </div><!-- /.act__grid -->
@@ -338,6 +405,6 @@
   <script src="images/snowwhite/show.js?v=05ebbc48"></script>
   <script src="images/snowwhite/people.js?v=c3f70cc0"></script>
   <script src="scripts/main.js?v=b770cc69"></script>
-  <script src="scripts/snowwhite.js?v=a548fe84"></script>
+  <script src="scripts/snowwhite.js?v=c70c27fc"></script>
 </body>
 </html>
