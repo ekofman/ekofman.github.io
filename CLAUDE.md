@@ -135,7 +135,12 @@ under 1280px wide rather than substituting a smaller one.
 
 The same derivatives feed the cycling frame beside the banner on `index.html`
 (`.showreel`). Those six photos are picked by hand and listed in the HTML; the
-crossfade is pure CSS, one shared loop with a per-image `--i` delay.
+crossfade is pure CSS, one shared loop with a per-image `--i` delay. The Haber card
+uses the same marquee (logo as the banner, reading photos as the reel), but only
+two photographs survive from the 2019 Armory reading, so it carries
+`.showreel--pair`: same 3.2s slot and crossfade, a two-slot keyframe set instead
+of six. If more Haber photos ever turn up, drop `--pair` and give them `--i:2`
+upward on the default loop.
 
 Non-artwork images (banners, headshot, logo) are **not** covered by the script.
 Convert by hand and update the `src` in `index.html`:

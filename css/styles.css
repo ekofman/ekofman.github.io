@@ -448,6 +448,18 @@ a.show__banner:hover img { transform: scale(1.03); }
   19.7%  { opacity: 0; }
   100%   { opacity: 0; }
 }
+/* Haber has two surviving reading photos, not six, so it runs the same 3.2s
+   slot and the same crossfade over half as many keyframes. The delay longhand
+   above still applies, so --i:0 and --i:1 stagger it exactly as before. */
+.showreel--pair img { animation-name: showreel-pair; animation-duration: 6.4s; }
+@keyframes showreel-pair {
+  0%    { opacity: 0; }
+  9%    { opacity: 1; }
+  50%   { opacity: 1; }
+  59%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
 .showreel__cue {
   position: absolute; left: 0; right: 0; bottom: 0;
   padding: 2.5rem 0.9rem 0.7rem;
@@ -465,18 +477,6 @@ a.show__banner:hover img { transform: scale(1.03); }
 
 /* Haber */
 .show--haber { --accent: var(--oxblood); }
-.show--haber .show__logo { display: block; max-width: 420px; margin: 0.5rem 0 1.25rem; overflow: hidden; border-radius: 3px; }
-.show--haber .show__logo img { border-radius: 3px; transition: transform 0.7s var(--ease); }
-.show--haber .show__logo:hover img { transform: scale(1.04); }
-.show__gallery figure { overflow: hidden; }
-.show__gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease); }
-.show__gallery figure:hover img { transform: scale(1.05); }
-.show__gallery {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 2px;
-  background: var(--line);
-}
 
 .quote {
   border-left: 2px solid var(--oxblood);
@@ -792,14 +792,12 @@ a.show__banner:hover img { transform: scale(1.03); }
   .showreel { aspect-ratio: 16 / 9; }
 
   .show--haber { display: block; }
-  .show__gallery { grid-template-columns: 1fr 1fr; }
   .lab__grid { grid-template-columns: 1fr; }
   .gallery__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
   .gallery__grid { grid-template-columns: 1fr 1fr; }
-  .show__gallery { grid-template-columns: 1fr; }
 }
 
 /* =====================================================================

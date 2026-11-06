@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Cinzel:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=267450b9" />
+  <link rel="stylesheet" href="css/styles.css?v=7c4e87fd" />
 </head>
 <body>
 
@@ -154,11 +154,23 @@
 
       <!-- Feature: Haber -->
       <article class="show show--haber reveal" data-theme="haber">
-        <div class="show__body">
-          <p class="show__kicker">Original rock opera</p>
-          <a class="show__logo" href="https://habermusical.wordpress.com/about/" target="_blank" rel="noopener">
+        <div class="show__marquee">
+          <a class="show__banner" href="https://habermusical.wordpress.com/about/" target="_blank" rel="noopener">
             <img src="images/haber-logo.webp" alt="Haber — a new musical" />
           </a>
+          <!-- the same cycling frame as Snow White's, beside the logo. Only two
+               photographs survive from the 2019 reading, so this reel runs the
+               two-slot loop (.showreel--pair in styles.css); drop more in and
+               they can take --i 2, 3, ... on the six-slot default. -->
+          <a class="showreel showreel--pair" href="https://www.youtube.com/watch?v=v4eR5I-1S54" target="_blank" rel="noopener" aria-label="Watch the concert-style reading on YouTube">
+            <img src="images/haber-reading-wide.webp" alt="The Haber staged reading in performance — cast in lab coats at music stands before a full house" style="--i:0" decoding="async" />
+            <img src="images/haber-reading-closeup.webp" alt="Close-up of performers at the Haber staged reading" loading="lazy" style="--i:1" decoding="async" />
+            <span class="showreel__cue">Watch the reading &rarr;</span>
+          </a>
+        </div>
+        <div class="show__body">
+          <p class="show__kicker">Original rock opera</p>
+          <h3 class="show__title"><a href="https://habermusical.wordpress.com/about/" target="_blank" rel="noopener">Haber</a></h3>
           <p class="show__text">
             An original rock opera about Fritz Haber &mdash; the chemist whose work fed billions yet
             also fueled the worst excesses of the Great War. Though the events it depicts took place
@@ -187,15 +199,6 @@
             <a class="btn btn--ghost btn--haber" href="https://habermusical.wordpress.com/about/" target="_blank" rel="noopener">Read the synopsis</a>
             <a class="btn btn--ghost btn--haber" href="https://habermusical.wordpress.com/featured-demo-recordings/" target="_blank" rel="noopener">Hear demo recordings</a>
           </div>
-        </div>
-
-        <div class="show__gallery">
-          <figure>
-            <img src="images/haber-reading-wide.webp" alt="The Haber staged reading in performance — cast in lab coats at music stands before a full house" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/haber-reading-closeup.webp" alt="Close-up of performers at the Haber staged reading" loading="lazy" />
-          </figure>
         </div>
       </article>
 
