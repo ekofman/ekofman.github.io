@@ -1,0 +1,42 @@
+# Deploys the repo to GitHub Pages.
+#
+# The site has no build step: every file in the working tree is served as-is,
+# which is what the legacy Pages builder used to do. That builder started
+# failing (three "Page build failed" errors with duration 0, then a build it
+# reported as successful while continuing to serve the previous commit), so the
+# deploy moved here, which is the path GitHub still supports.
+#
+# upload-pages-artifact tars the whole repo minus .git and .github, so CNAME
+# and .nojekyll travel with it and the custom domain survives each deploy.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:      # lets a deploy be re-run from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# never let two deploys race; a queued one supersedes an older queued one, but
+# an in-flight deploy is allowed to finish rather than leaving the site half-written
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

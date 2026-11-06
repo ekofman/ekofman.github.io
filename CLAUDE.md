@@ -14,15 +14,22 @@ The repo **is** the deploy target. GitHub Pages serves the working tree of `main
 git add -A && git commit -m "..." && git push origin main
 ```
 
-That's the whole deploy. Pages rebuilds in well under a minute, then
-https://erickofman.com serves it. Verify rather than assume — the push succeeding
-only means GitHub got the commit, not that it rebuilt:
+That's the whole deploy. The push triggers `.github/workflows/pages.yml`, which
+uploads the working tree and hands it to Pages; it finishes in a minute or two,
+then https://erickofman.com serves it.
+
+Verify rather than assume, and verify the *content*, not the build's own verdict.
+On 2026-11-06 the old builder failed three deploys outright and then reported one
+as "built" while continuing to serve the previous commit, so `gh api … /pages/builds`
+saying `built` is not evidence the site changed:
 
 ```
-until ! curl -s https://erickofman.com/ | grep -q "<old text>"; do sleep 5; done
+until curl -s "https://erickofman.com/?cb=$(date +%s)" | grep -q "<new text>"; do sleep 10; done
 ```
 
-Run that with `run_in_background: true` and keep working; you'll be notified.
+Run that with `run_in_background: true` and keep working; you'll be notified. The
+`?cb=` is not optional — Fastly caches for 10 minutes and `Cache-Control: no-cache`
+on the request does not bust it. `gh run watch` follows the deploy itself.
 
 Local CSS/JS links carry a content-hash `?v=` stamp so phones refetch changed
 files instead of serving a cached copy for the rest of Pages' 10-minute max-age.
@@ -41,6 +48,12 @@ this is a live personal site under the user's own name.
 ### Deployment facts worth not rediscovering
 
 - Repo `ekofman/ekofman.github.io`, branch `main`, path `/`.
+- Pages builds through **GitHub Actions** (`build_type: "workflow"`), not the
+  legacy branch builder — switched 2026-11-06 after the legacy one started
+  failing and then silently serving stale content. The workflow is
+  `.github/workflows/pages.yml`; it has no build step, it just uploads the repo.
+  `upload-pages-artifact` excludes `.git` and `.github` and nothing else, so
+  `CNAME` and `.nojekyll` ship with every deploy and the domain survives.
 - Custom domain `erickofman.com`, HTTPS enforced. **Do not delete the `CNAME`
   file** — Pages reads it, and losing it drops the domain back to `ekofman.github.io`.
 - `.nojekyll` disables Jekyll processing. Leave it.
